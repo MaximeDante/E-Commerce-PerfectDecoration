@@ -30,11 +30,14 @@
 <body>
     <!-- navbar-->
     <header class="header mb-5">
-        <!--TOPBAR-->
+        <!--
+      *** TOPBAR ***
+      _________________________________________________________
+      -->
         <div id="top">
-            <div clas="container">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" class="text-dark">PERFECT DECORATION</a><a href="#" class="ml-1">Get flat 35% off on orders over $50!</a></div>
+                    <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#">SHOP</a><a href="#" class="ml-1">PERFECT DECORATION</a></div>
                     <div class="col-lg-6 text-center text-lg-right">
                         <ul class="menu list-inline mb-0">
                             <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
@@ -69,8 +72,10 @@
                     </div>
                 </div>
             </div>
+            <!-- *** TOP BAR END ***-->
 
-        </div> <!-- End top bar -->
+
+        </div>
         <nav class="navbar navbar-expand-lg">
             <div class="container"><a href="index.html" class="navbar-brand home"><img src="Images/Free_Sample_By_Wix.jpg" alt="Obaju logo" class="d-none d-md-inline-block"><img src="Images/Free_Sample_By_Wix.jpg" alt="Obaju logo" class="d-inline-block d-md-none"><span class="sr-only">Obaju - go to homepage</span></a>
                 <div class="navbar-buttons">
@@ -255,10 +260,10 @@
             <div class="container">
                 <div class="row">
                     <div id="main-slider" class="owl-carousel owl-theme">
-                        <div class="item"><img src="Images/Sniper_sepia-wallpaper-1600x1200.jpg" alt="" class="img-fluid"></div>
-                        <div class="item"><img src="Images/taktsang-above-paro-valley-bhutan-1.jpg" alt="" class="img-fluid"></div>
                         <div class="item"><img src="Images/taktshang_edit.jpg" alt="" class="img-fluid"></div>
-                        <div class="item"><img src="Images/war_history_i-wallpaper-1600x1200.jpg" alt="" class="img-fluid"></div>
+                        <div class="item"><img src="Images/taktshang_edit.jpg" alt="" class="img-fluid"></div>
+                        <div class="item"><img src="Images/taktshang_edit.jpg" alt="" class="img-fluid"></div>
+                        <div class="item"><img src="Images/taktshang_edit.jpg" alt="" class="img-fluid"></div>
                     </div>
                     <!-- /#main-slider-->
                 </div>
@@ -303,26 +308,34 @@
         *** Features Product***
         _________________________________________________________
         -->
+            <div class="box text-center">
+                <div class="container">
+                    <div class="col-md-12">
+                        <h3 class="text-uppercase">Features Products</h3>
+                        <p class="lead mb-0">What's new in the world of fashion?</p>
+                    </div>
+                </div>
+            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="panel panel-primary">
                             <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+                            <div class="panel-body"><img src="images/a1.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                             <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="panel panel-danger">
                             <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+                            <div class="panel-body"><img src="images/a2.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                             <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="panel panel-success">
                             <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+                            <div class="panel-body"><img src="images/a3.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                             <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
                         </div>
                     </div>
@@ -334,21 +347,21 @@
                     <div class="col-sm-4">
                         <div class="panel panel-primary">
                             <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+                            <div class="panel-body"><img src="images/b1.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                             <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="panel panel-primary">
                             <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+                            <div class="panel-body"><img src="images/b2.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                             <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="panel panel-primary">
                             <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+                            <div class="panel-body"><img src="images/b3.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                             <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
                         </div>
                     </div>
@@ -377,7 +390,7 @@
                     <h4 class="mb-3">User section</h4>
                     <ul class="list-unstyled">
                         <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
-                        <li><a href="register.html">Regiter</a></li>
+                        <li><a href="register.html">Register</a></li>
                     </ul>
                 </div>
                 <!-- /.col-lg-3-->
