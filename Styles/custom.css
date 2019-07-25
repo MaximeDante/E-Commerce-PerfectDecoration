@@ -286,13 +286,7 @@ a, button {
     width: 500px;
   }
   
-  .breadcrumb {
-    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    border-radius: 0;
-    padding: 0.5rem 1rem;
-  }
+  
 
   /* Slide show carousel */
 .carousel-inner img {
@@ -471,5 +465,58 @@ a, button {
   #copyright p {
     margin: 0;
   }
-  
-  
+/* breadcrumb */
+.breadcrumb {
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    background: #fff;
+    border-radius: 0;
+    padding: 0.5rem 1rem;
+  }
+  .br{
+    color:#4fbfa8;
+
+  }
+  /* product categories and categories sidebar */
+  #content .card.sidebar-menu {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+  }
+  #content .card.sidebar-menu h3 {
+    padding: 5px 0;
+    margin: 0;
+    text-align: center;
+  }
+  #content .card.sidebar-menu ul.nav.category-menu {
+    margin-bottom: 20px;
+    letter-spacing: 0.1em;
+    padding:10px;
+  font-weight: bold;
+  border-radius: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 18px;
+  }
+  #content .card.sidebar-menu ul.nav.category-menu li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #4fbfa8;
+  }
+  #content .card.sidebar-menu ul.nav.category-menu li a:not(.active):hover {
+    background: #eeeeee;
+    
+  }
+  #content .card.sidebar-menu ul.nav ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  #content .card.sidebar-menu ul.nav ul li {
+    display: block;
+  }
