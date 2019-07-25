@@ -538,6 +538,9 @@
             </div> <!-- latest Porduct col ends -->
         </div> <!-- latest Porduct row ends -->
     </div> <!-- latest Porduct ends -->
+    <?php
+    include("includes/footer.php");
+    ?>
 
 </body>
 
