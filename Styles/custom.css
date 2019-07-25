@@ -306,9 +306,9 @@ a, button {
 }
 .box{
     background: #ffffff;
-    margin: 100px 0 30px ;
+    margin: 10px 0 30px ;
     border: solid 1px #e6e6e6;
-    
+    box-sizing: border-box;
     padding: 20px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, .3);
 }
@@ -317,31 +317,31 @@ a, button {
     font-size: 120px;
     width: 100%;
     text-align: center;
-    top: -20px;
+    top: 0;
     left: 0px;
     height: 100%;
     float: left;
     color: #dadada;
+    transition: all 0.3s;
     box-sizing: border-box;
     z-index: 1;
 }
 #advantages .box h3{
     position: relative;
-    margin: 0 0 20px;
+    margin: 0 0 10px;
     font-weight: 300;
     text-transform: uppercase;
+    letter-spacing: 0.1em;
     z-index: 2;
 }
-#advantages .box h3 a{
-    color: #4fbfa8;
-}
+
 #advantages .box h3 a:hover{
     text-decoration: none;
 }
 #advantages .box p{
     position: relative;
     z-index: 2;
-    color: #555555;
+    color: #555;
 }
 /* Latest Products style */
 #hot h2{
@@ -351,5 +351,3 @@ a, button {
     text-align: center;
     text-transform: uppercase;
 }
-
- 

@@ -19,14 +19,10 @@
     <!-- Google fonts - Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700">
     <!-- Custom stylesheet - for your changes-->
-    <!-- <link rel="stylesheet" href="css/custom.css" id="theme-stylesheet"> -->
-    <!-- theme stylesheet-->
-    <link rel="stylesheet" href="Styles/style.css">
-
+    <link rel="stylesheet" href="Styles/custom.css">
 </head>
 
 <body>
-    <!-- navbar-->
     <header class="header mb-5">
         <!--
       *** TOPBAR ***
@@ -253,7 +249,7 @@
                 </form>
             </div>
         </div> <!-- search ends -->
-    </header>
+    </header> <!-- Header ends -->
     <div class="container" id="slider">
         <!-- container Begin -->
         <div class="col-md-12">
@@ -291,7 +287,6 @@
             </div><!-- container Finish -->
         </div>
     </div> <!-- slider ends -->
-
     <div class="container" id="advantages">
         <div class="container">
             <div class="row mb-4">
@@ -321,9 +316,6 @@
         </div>
         <!-- /.container-->
     </div> <!-- advantages ends -->
-
-
-
     <div id="hot">
         <!-- hot begins -->
         <div class="box">
@@ -416,8 +408,6 @@
             </div>
         </div>
     </div>
-
-
 
 </body>
 
