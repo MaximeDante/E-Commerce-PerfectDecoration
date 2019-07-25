@@ -19,12 +19,10 @@
     <!-- Google fonts - Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700">
     <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="Styles/style.css">
+    <!-- <link rel="stylesheet" href="css/custom.css" id="theme-stylesheet"> -->
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
-    <!-- owl carousel-->
-    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.css">
-    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="Styles/style.css">
+
 </head>
 
 <body>
@@ -37,12 +35,13 @@
         <div id="top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#">SHOP</a><a href="#" class="ml-1">PERFECT DECORATION</a></div>
+                    <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" class="btn btn-success btn-sm">Welcome</a><a href="#" class="ml-1">4 Items In Your Cart | Total Price: $300</a></div>
                     <div class="col-lg-6 text-center text-lg-right">
                         <ul class="menu list-inline mb-0">
                             <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
                             <li class="list-inline-item"><a href="register.html">Register</a></li>
                             <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -75,9 +74,9 @@
             <!-- *** TOP BAR END ***-->
 
 
-        </div>
+        </div> <!-- top bar ends -->
         <nav class="navbar navbar-expand-lg">
-            <div class="container"><a href="index.html" class="navbar-brand home"><img src="Images/Free_Sample_By_Wix.jpg" alt="Obaju logo" class="d-none d-md-inline-block"><img src="Images/Free_Sample_By_Wix.jpg" alt="Obaju logo" class="d-inline-block d-md-none"><span class="sr-only">Obaju - go to homepage</span></a>
+            <div class="container"><a href="index.html" class="navbar-brand home"><img src="Images/.jpg" alt="Obaju logo" class="d-none d-md-inline-block"><img src="Images/.jpg" alt="Obaju logo" class="d-inline-block d-md-none"><span class="sr-only">Obaju - go to homepage</span></a>
                 <div class="navbar-buttons">
                     <button type="button" data-toggle="collapse" data-target="#navigation" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
                     <button type="button" data-toggle="collapse" data-target="#search" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></button><a href="basket.html" class="btn btn-outline-secondary navbar-toggler"><i class="fa fa-shopping-cart"></i></a>
@@ -237,11 +236,11 @@
                     <div class="navbar-buttons d-flex justify-content-end">
                         <!-- /.nav-collapse-->
                         <div id="search-not-mobile" class="navbar-collapse collapse"></div><a data-toggle="collapse" href="#search" class="btn navbar-btn btn-primary d-none d-lg-inline-block"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></a>
-                        <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block"><a href="basket.html" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span>3 items in cart</span></a></div>
+                        <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block"><a href="basket.html" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span>0 items in your cart</span></a></div>
                     </div>
                 </div>
             </div>
-        </nav>
+        </nav> <!-- navbar ends -->
         <div id="search" class="collapse">
             <div class="container">
                 <form role="search" class="ml-auto">
@@ -253,216 +252,171 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </div> <!-- search ends -->
     </header>
-    <div id="all">
-        <div id="content">
-            <div class="container">
-                <div class="row">
-                    <div id="main-slider" class="owl-carousel owl-theme">
-                        <div class="item"><img src="Images/taktshang_edit.jpg" alt="" class="img-fluid"></div>
-                        <div class="item"><img src="Images/taktshang_edit.jpg" alt="" class="img-fluid"></div>
-                        <div class="item"><img src="Images/taktshang_edit.jpg" alt="" class="img-fluid"></div>
-                        <div class="item"><img src="Images/taktshang_edit.jpg" alt="" class="img-fluid"></div>
+    <div class="container" id="slider">
+        <!-- container Begin -->
+        <div class="col-md-12">
+            <!-- col-md-12 Begin -->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- container Begin -->
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="Images/main-slider1.jpg" alt="slider1" width="1100" height="500">
                     </div>
-                    <!-- /#main-slider-->
+                    <div class="carousel-item">
+                        <img src="Images/main-slider1.jpg" alt="slider2" width="1100" height="500">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/main-slider1.jpg" alt="slider3" width="1100" height="500">
+                    </div>
                 </div>
 
-            </div>
-            <!--
-        *** ADVANTAGES HOMEPAGE ***
-        _________________________________________________________
-        -->
-            <div id="advantages">
-                <div class="container">
-                    <div class="row mb-4">
-                        <div class="col-md-4">
-                            <div class="box clickable d-flex flex-column justify-content-center mb-0 h-100">
-                                <div class="icon"><i class="fa fa-heart"></i></div>
-                                <h3><a href="#">We love our customers</a></h3>
-                                <p class="mb-0">We are known to provide best possible service ever</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box clickable d-flex flex-column justify-content-center mb-0 h-100">
-                                <div class="icon"><i class="fa fa-tags"></i></div>
-                                <h3><a href="#">Best prices</a></h3>
-                                <p class="mb-0">You can check that the height of the boxes adjust when longer text like this one is used in one of them.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box clickable d-flex flex-column justify-content-center mb-0 h-100">
-                                <div class="icon"><i class="fa fa-thumbs-up"></i></div>
-                                <h3><a href="#">100% satisfaction guaranteed</a></h3>
-                                <p class="mb-0">Free returns on everything for 3 months.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row-->
-                </div>
-                <!-- /.container-->
-            </div>
-            <!-- /#advantages-->
-            <!-- *** ADVANTAGES END ***-->
-            <!--
-        *** Features Product***
-        _________________________________________________________
-        -->
-            <div class="box text-center">
-                <div class="container">
-                    <div class="col-md-12">
-                        <h3 class="text-uppercase">Features Products</h3>
-                        <p class="lead mb-0">What's new in the world of fashion?</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                            <div class="panel-body"><img src="images/a1.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-danger">
-                            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                            <div class="panel-body"><img src="images/a2.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-success">
-                            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                            <div class="panel-body"><img src="images/a3.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-                        </div>
-                    </div>
-                </div>
-            </div><br>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                            <div class="panel-body"><img src="images/b1.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                            <div class="panel-body"><img src="images/b2.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                            <div class="panel-body"><img src="images/b3.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div><!-- container Finish -->
         </div>
+    </div> <!-- slider ends -->
 
-    </div>
-    <!--
-    *** FOOTER ***
-    _________________________________________________________
-    -->
-    <div id="footer">
+    <div class="container" id="advantages">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="mb-3">Pages</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="text.html">About us</a></li>
-                        <li><a href="text.html">Terms and conditions</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact us</a></li>
-                    </ul>
-                    <hr>
-                    <h4 class="mb-3">User section</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
-                        <li><a href="register.html">Register</a></li>
-                    </ul>
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="box clickable d-flex flex-column justify-content-center mb-0 h-100">
+                        <div class="icon"><i class="fa fa-heart"></i></div>
+                        <h3><a href="#">We love our customers</a></h3>
+                        <p class="mb-0">We are known to provide best possible service ever</p>
+                    </div>
                 </div>
-                <!-- /.col-lg-3-->
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="mb-3">Top categories</h4>
-                    <h5>Men</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="category.html">T-shirts</a></li>
-                        <li><a href="category.html">Shirts</a></li>
-                        <li><a href="category.html">Accessories</a></li>
-                    </ul>
-                    <h5>Ladies</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="category.html">T-shirts</a></li>
-                        <li><a href="category.html">Skirts</a></li>
-                        <li><a href="category.html">Pants</a></li>
-                        <li><a href="category.html">Accessories</a></li>
-                    </ul>
+                <div class="col-md-4">
+                    <div class="box clickable d-flex flex-column justify-content-center mb-0 h-100">
+                        <div class="icon"><i class="fa fa-tags"></i></div>
+                        <h3><a href="#">Best prices</a></h3>
+                        <p class="mb-0">You can check that the height of the boxes adjust when longer text like this one is used in one of them.</p>
+                    </div>
                 </div>
-                <!-- /.col-lg-3-->
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="mb-3">Where to find us</h4>
-                    <p><strong>Obaju Ltd.</strong><br>13/25 New Avenue<br>New Heaven<br>45Y 73J<br>England<br><strong>Great Britain</strong></p><a href="contact.html">Go to contact page</a>
-                    <hr class="d-block d-md-none">
+                <div class="col-md-4">
+                    <div class="box clickable d-flex flex-column justify-content-center mb-0 h-100">
+                        <div class="icon"><i class="fa fa-thumbs-up"></i></div>
+                        <h3><a href="#">100% satisfaction guaranteed</a></h3>
+                        <p class="mb-0">Free returns on everything for 3 months.</p>
+                    </div>
                 </div>
-                <!-- /.col-lg-3-->
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="mb-3">Get the news</h4>
-                    <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                    <form>
-                        <div class="input-group">
-                            <input type="text" class="form-control"><span class="input-group-append">
-                                <button type="button" class="btn btn-outline-secondary">Subscribe!</button></span>
-                        </div>
-                        <!-- /input-group-->
-                    </form>
-                    <hr>
-                    <h4 class="mb-3">Stay in touch</h4>
-                    <p class="social"><a href="#" class="facebook external"><i class="fa fa-facebook"></i></a><a href="#" class="twitter external"><i class="fa fa-twitter"></i></a><a href="#" class="instagram external"><i class="fa fa-instagram"></i></a><a href="#" class="gplus external"><i class="fa fa-google-plus"></i></a><a href="#" class="email external"><i class="fa fa-envelope"></i></a></p>
-                </div>
-                <!-- /.col-lg-3-->
             </div>
             <!-- /.row-->
         </div>
         <!-- /.container-->
-    </div>
-    <!-- /#footer-->
-    <!-- *** FOOTER END ***-->
-    <!--
-    *** COPYRIGHT ***
-    _________________________________________________________
-    -->
-    <div id="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-2 mb-lg-0">
-                    <p class="text-center text-lg-left">©2019 Perfect Decoration.</p>
-                </div>
-                <div class="col-lg-6">
+    </div> <!-- advantages ends -->
+
+
+
+    <div id="hot">
+        <!-- hot begins -->
+        <div class="box">
+            <!-- box begins -->
+            <div class="container">
+                <!-- container begins -->
+                <div class="col-md-12">
+                    <h2>
+                        Our Latest Products
+                    </h2>
 
                 </div>
+
+            </div> <!-- container ends -->
+        </div> <!-- box ends -->
+    </div> <!-- hot ends -->
+    <div id="content" class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-6 single">
+                <div class="product">
+                    <a href="details.php">
+                        <img class="img-responsive" src="Images/f4.jpg" alt="Product1">
+                    </a>
+                    <div class="text">
+                        <h3>
+                            <a href="details.php">
+                                Earings
+                            </a>
+                        </h3>
+                        <p class="price">R100</p>
+                        <p class="button">
+                            <a href="details.php" class="btn btn-default">View Details</a>
+                            <a href="details.php" class="btn-btn-primary">
+                                <i class="fa shoping-cart">
+                                    Add to Cart
+                                </i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4 col-sm-6 single">
+                <div class="product">
+                    <a href="details.php">
+                        <img class="img-responsive" src="Images/f4.jpg" alt="Product1">
+                    </a>
+                    <div class="text">
+                        <h3>
+                            <a href="details.php">
+                                Earings
+                            </a>
+                        </h3>
+                        <p class="price">R100</p>
+                        <p class="button">
+                            <a href="details.php" class="btn btn-default">View Details</a>
+                            <a href="details.php" class="btn-btn-primary">
+                                <i class="fa shoping-cart">
+                                    Add to Cart
+                                </i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4 col-sm-6 single">
+                <div class="product">
+                    <a href="details.php">
+                        <img class="img-responsive" src="Images/f4.jpg" alt="Product1">
+                    </a>
+                    <div class="text">
+                        <h3>
+                            <a href="details.php">
+                                Earings
+                            </a>
+                        </h3>
+                        <p class="price">R100</p>
+                        <p class="button">
+                            <a href="details.php" class="btn btn-default">View Details</a>
+                            <a href="details.php" class="btn-btn-primary">
+                                <i class="fa shoping-cart">
+                                    Add to Cart
+                                </i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-    <!-- *** COPYRIGHT END ***-->
-    <!-- JavaScript files-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
-    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.js"></script>
-    <script src="js/front.js"></script>
+
 
 
 </body>
