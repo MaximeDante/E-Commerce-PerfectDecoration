@@ -333,11 +333,14 @@
         </div> <!-- box ends -->
     </div> <!-- hot ends -->
     <div id="content" class="container">
+        <!-- latest Porduct Begins -->
         <div class="row">
-            <div class="col-sm-4 col-sm-6 single">
+            <!-- latest Porduct row Begins -->
+            <div class="col-sm-3">
+                <!-- latest Porduct col begins -->
                 <div class="product">
                     <a href="details.php">
-                        <img class="img-responsive" src="Images/f4.jpg" alt="Product1">
+                        <img class="img-fluid" src="Images/product-2.jpg" alt="Product1">
                     </a>
                     <div class="text">
                         <h3>
@@ -347,9 +350,9 @@
                         </h3>
                         <p class="price">R100</p>
                         <p class="button">
-                            <a href="details.php" class="btn btn-default">View Details</a>
-                            <a href="details.php" class="btn-btn-primary">
-                                <i class="fa shoping-cart">
+                            <a href="details.php" class="btn btn-light">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class=" fa fa-shopping-cart">
                                     Add to Cart
                                 </i>
                             </a>
@@ -357,11 +360,12 @@
                     </div>
                 </div>
 
-            </div>
-            <div class="col-sm-4 col-sm-6 single">
+            </div> <!-- latest Porduct col ends -->
+            <div class="col-sm-3">
+                <!-- latest Porduct col begins -->
                 <div class="product">
                     <a href="details.php">
-                        <img class="img-responsive" src="Images/f4.jpg" alt="Product1">
+                        <img class="img-fluid" src="Images/product-2.jpg" alt="Product1">
                     </a>
                     <div class="text">
                         <h3>
@@ -371,9 +375,9 @@
                         </h3>
                         <p class="price">R100</p>
                         <p class="button">
-                            <a href="details.php" class="btn btn-default">View Details</a>
-                            <a href="details.php" class="btn-btn-primary">
-                                <i class="fa shoping-cart">
+                            <a href="details.php" class="btn btn-light">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart">
                                     Add to Cart
                                 </i>
                             </a>
@@ -381,11 +385,37 @@
                     </div>
                 </div>
 
-            </div>
-            <div class="col-sm-4 col-sm-6 single">
+            </div> <!-- latest Porduct col ends -->
+            <div class="col-sm-3">
+                <!-- latest Porduct col begins -->
                 <div class="product">
                     <a href="details.php">
-                        <img class="img-responsive" src="Images/f4.jpg" alt="Product1">
+                        <img class="img-fluid" src="Images/product-2.jpg" alt="Product1">
+                    </a>
+                    <div class="text">
+                        <h3>
+                            <a href="details.php">
+                                Earings
+                            </a>
+                        </h3>
+                        <p class="price">R100</p>
+                        <p class=" button">
+                            <a href="details.php" class="btn btn-light">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart">
+                                    Add to Cart
+                                </i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- latest Porduct col ends -->
+            <div class="col-sm-3">
+                <!-- latest Porduct col begins -->
+                <div class="product">
+                    <a href="details.php">
+                        <img class="img-fluid" src="Images/product-2.jpg" alt="Product1">
                     </a>
                     <div class="text">
                         <h3>
@@ -395,9 +425,9 @@
                         </h3>
                         <p class="price">R100</p>
                         <p class="button">
-                            <a href="details.php" class="btn btn-default">View Details</a>
-                            <a href="details.php" class="btn-btn-primary">
-                                <i class="fa shoping-cart">
+                            <a href="details.php" class="btn btn-light">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart">
                                     Add to Cart
                                 </i>
                             </a>
@@ -405,9 +435,109 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </div>
+            </div> <!-- latest Porduct col ends -->
+            <div class="col-sm-3">
+                <!-- latest Porduct col begins -->
+                <div class="product">
+                    <a href="details.php">
+                        <img class="img-fluid" src="Images/product-2.jpg" alt="Product1">
+                    </a>
+                    <div class="text">
+                        <h3>
+                            <a href="details.php">
+                                Earings
+                            </a>
+                        </h3>
+                        <p class="price">R100</p>
+                        <p class="button">
+                            <a href="details.php" class="btn btn-light">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class=" fa fa-shopping-cart">
+                                    Add to Cart
+                                </i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- latest Porduct col ends -->
+            <div class="col-sm-3">
+                <!-- latest Porduct col begins -->
+                <div class="product">
+                    <a href="details.php">
+                        <img class="img-fluid" src="Images/product-2.jpg" alt="Product1">
+                    </a>
+                    <div class="text">
+                        <h3>
+                            <a href="details.php">
+                                Earings
+                            </a>
+                        </h3>
+                        <p class="price">R100</p>
+                        <p class="button">
+                            <a href="details.php" class="btn btn-light">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart">
+                                    Add to Cart
+                                </i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- latest Porduct col ends -->
+            <div class="col-sm-3">
+                <!-- latest Porduct col begins -->
+                <div class="product">
+                    <a href="details.php">
+                        <img class="img-fluid" src="Images/product-2.jpg" alt="Product1">
+                    </a>
+                    <div class="text">
+                        <h3>
+                            <a href="details.php">
+                                Earings
+                            </a>
+                        </h3>
+                        <p class="price">R100</p>
+                        <p class=" button">
+                            <a href="details.php" class="btn btn-light">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart">
+                                    Add to Cart
+                                </i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- latest Porduct col ends -->
+            <div class="col-sm-3">
+                <!-- latest Porduct col begins -->
+                <div class="product">
+                    <a href="details.php">
+                        <img class="img-fluid" src="Images/product-2.jpg" alt="Product1">
+                    </a>
+                    <div class="text">
+                        <h3>
+                            <a href="details.php">
+                                Earings
+                            </a>
+                        </h3>
+                        <p class="price">R100</p>
+                        <p class="button">
+                            <a href="details.php" class="btn btn-light">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart">
+                                    Add to Cart
+                                </i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- latest Porduct col ends -->
+        </div> <!-- latest Porduct row ends -->
+    </div> <!-- latest Porduct ends -->
 
 </body>
 
