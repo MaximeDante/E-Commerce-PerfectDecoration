@@ -429,17 +429,17 @@
                         </div>
                     </div> <!-- row end -->
 
-                    
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item"><a class="page-link" href="#">First Page</a></li>
-                            <li class="page-item"><a class="page-link"href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">4</a></li>
-                            <li class="page-item"><a class="page-link" href="#">5</a></li>
-                            <li class="page-item"><a  class="page-link"href="#">Last page Page</a></li>
-                        </ul>
-                    
+
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link" href="#">First Page</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Last page Page</a></li>
+                    </ul>
+
 
                 </div> <!-- col 9 ends -->
 
@@ -450,3 +450,6 @@
     <?php
     include("includes/footer.php");
     ?>
+</body>
+
+</html>
