@@ -534,6 +534,7 @@ a, button {
 }
 #content #mainImage{
     box-shadow: 0px 1px 5px rgba(0, 0, 0, .7);
+    margin-bottom: 30px;
 }
 #content #thumbs a{
     display: block;
@@ -545,6 +546,17 @@ a, button {
 #content .headline{
     height: 305px;
 }
+.carousel-item{
+  height: 200px;
+} 
+.carousel-item img{
+  position: relative;
+    top: 0;
+    left: 0;
+    min-height: 500px;
+}
+
+
 
 @media(max-width: 768px){
     .column{

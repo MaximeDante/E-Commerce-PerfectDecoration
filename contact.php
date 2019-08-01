@@ -79,8 +79,8 @@
                 </div>
                 <div id="navigation" class="collapse navbar-collapse">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a href="#" class="nav-link ">Home</a></li>
-                        <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link active">Men<b class="caret"></b></a>
+                        <li class="nav-item"><a href="#" class="nav-link active ">Home</a></li>
+                        <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link ">Men<b class="caret"></b></a>
                             <ul class="dropdown-menu megamenu">
                                 <li>
                                     <div class="row">
@@ -250,263 +250,101 @@
             </div>
         </div> <!-- search ends -->
     </header> <!-- Header ends -->
+
     <div id="content">
-        <!-- Content begins -->
-        <div class="container">
-            <!-- container begins -->
+        <div id="container-fluid">
             <div class="col-lg-12">
-                <!-- col 12 begins -->
                 <nav aria-label="breadcrumb">
                     <!-- Breadcrumb -->
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a class="br" href="index.php">Home</a></li>
-                        <li aria-current="page" class="breadcrumb-item active">Men</li>
+                        <li aria-current="page" class="breadcrumb-item active">Contact</li>
                     </ol>
                 </nav>
+            </div>
 
-            </div> <!-- col 12 ends breadcrumb -->
-            <div class="row">
-                <!-- row begin -->
-                <div class="col-lg-3 ">
-                    <!-- col 3 begins -->
-                    <?php
-                    include("includes/sidebar.php");
-                    ?>
-
-                </div> <!-- col 3 ends -->
-                <div class="col-lg-9 ">
-                    <div id="productMain" class="row">
-
-                        <div class="col-md-6">
-                            <div id="mainImage">
-                                <!-- col-sm-6 Begin -->
-
-                                <!-- #mainImage Begin -->
-                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                    <!-- carousel Begin -->
-
-                                    <!-- Indicators -->
-                                    <ul class="carousel-indicators">
-                                        <li data-target="#demo" data-slide-to="0" class="active"></li>
-                                        <li data-target="#demo" data-slide-to="1"></li>
-                                        <li data-target="#demo" data-slide-to="2"></li>
-                                    </ul>
-
-                                    <!-- The slideshow -->
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="Images/a1.jpg" alt="slider1" class="img-fluid" >
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="Images/a1.jpg" alt="slider2" class="img-fluid" >
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="Images/a1.jpg" alt="slider3" class="img-fluid" >
-                                        </div>
-                                    </div>
-
-                                    <!-- Left and right controls -->
-                                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-                                        <span class="carousel-control-prev-icon"></span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-                                        <span class="carousel-control-next-icon"></span>
-                                    </a>
-                                </div><!-- carousel Finish -->
-                            </div> <!-- mainImage Finish -->
-                        </div> <!-- col-sm-6 end -->
-                        <div class="col-md-6">
-                            <!-- col-sm-6 Begin -->
-                            <div class="box">
-                                <!-- box Begin -->
-                                <h1 class="text-center">M-Dev Polo Shirt </h1>
-                                <div class="container-fliud">
-                                    <form action="details.php" class="form-horizontal" method="post">
-                                        <!-- form-horizontal Begin -->
-                                        <div class="row form-group">
-                                            <!-- form-group Begin -->
-                                            <label for="" class="col-lg-5 ">Products Quantity</label>
-
-                                            <div class="col-lg-7">
-                                                <!-- col-md-7 Begin -->
-                                                <select name="product_qty" id="" class="form-control">
-                                                    <!-- select Begin -->
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                </select><!-- select Finish -->
-
-                                            </div><!-- col-md-7 Finish -->
-
-                                        </div><!-- form-group Finish -->
-
-                                        <div class="form-group row">
-                                            <!-- form-group Begin -->
-                                            <label class="col-lg-5 control-label ">Product Size</label>
-
-                                            <div class="col-lg-7">
-                                                <!-- col-md-7 Begin -->
-
-                                                <select name="product_size" class="form-control">
-                                                    <!-- form-control Begin -->
-
-                                                    <option>Select a Size</option>
-                                                    <option>Small</option>
-                                                    <option>Medium</option>
-                                                    <option>Large</option>
-
-                                                </select><!-- form-control Finish -->
-
-                                            </div><!-- col-md-7 Finish -->
-                                        </div><!-- form-group Finish -->
-
-                                        <p class="price">$50</p>
-
-                                        <p class="text-center buttons"><button class="btn btn-primary i fa fa-shopping-cart"> Add to cart</button></p>
-
-                                    </form><!-- form-horizontal Finish -->
-                                </div>
-
-                            </div><!-- box Finish -->
-                            <div id="thumbs" class="row">
-                                <div class="col-lg-4 column">
-                                    <a href="#" class="owl-thumb-item"><img src="Images/a1.jpg" alt="" class="img-fluid"></a>
-
-                                </div>
-                                <div class="col-lg-4 column">
-                                    <a href="#" class="owl-thumb-item"><img src="Images/a1.jpg" alt="" class="img-fluid"></a>
-
-                                </div>
-                                <div class="col-lg-4 column">
-                                    <a href="#" class="owl-thumb-item"><img src="Images/a1.jpg" alt="" class="img-fluid"></a>
-
-                                </div>
-                            </div>
-
-                        </div><!-- col-sm-6 Finish -->
-
+            <div id="contact" class="box">
+                <h1>Contact</h1>
+                <p class="lead">How can we help you? Are you curious about something or you have a problem with our products?</p>
+                <p>Please feel free to contact us, anytime you have an enquiry.</p>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3><i class="fa fa-map-marker"></i>Address</h3>
+                        <p>23 station road<br>12 Elvis Court<br>kenilworth<br>Cape Town<br><strong>South Africa</strong></p>
                     </div>
-                    <div class="box" id="details">
-                        <!-- box Begin -->
-
-                        <h4>Product Details</h4>
-
-                        <p>
-
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione praesentium ipsum accusantium facere nulla, beatae vitae consequatur enim et nesciunt possimus doloribus omnis dolorum, ea quibusdam excepturi asperiores, temporibus! Consequatur?
-
-                        </p>
-
-                        <h4>Size</h4>
-
-                        <ul>
-                            <li>Small</li>
-                            <li>Medium</li>
-                            <li>Large</li>
-                        </ul>
-
-                        <hr>
-
-                    </div><!-- box Finish -->
-                    <div class="container">
-                        <div class="row same-height-row">
-                            <div class="col-md-12">
-                                <div class="box same-height">
-                                    <h3>You may also like these products </h3>
-                                </div>
+                    <!-- /.col-sm-4-->
+                    <div class="col-md-4">
+                        <h3><i class="fa fa-phone"></i> Call center</h3>
+                        <p class="text-muted">Standard rates apply for the calls</p>
+                        <p><strong>+27 61 0711289</strong></p>
+                    </div>
+                    <!-- /.col-sm-4-->
+                    <div class="col-md-4">
+                        <h3><i class="fa fa-envelope"></i> Electronic support</h3>
+                        <p class="text-muted">Please feel free to write an email to us.</p>
+                        <p><strong><a href="mailto:">perfectdecoration@gmail.com</a></strong></p>
+                    </div>
+                    <!-- /.col-sm-4-->
+                </div>
+                <!-- /.row-->
+                <hr>
+                <div>
+                    <h3 class="text-center">Or, get in touch with us</h3>
+                    <p class="text-center text-muted">Complete the form below and send us a message</p>
+                </div>
+                <hr>
+                <h2>Contact form</h2>
+                <form action="contact.php" method="post" id="contact">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="firstName">Firstname <span>(required)</span></label>
+                                <input id="firstName" type="text" class="form-control" required>
                             </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <div class="product same-height">
-                                    <div>
-                                        <a href="details.php">
-                                            <img class="img-fluid" src="Images/product-2.jpg" alt="Product 6">
-                                        </a>
-                                    </div>
-
-                                    <div class="text">
-                                        <!-- text Begin -->
-                                        <h3><a href="details.php">M-Dev Tank Top Women</a></h3>
-
-                                        <p class="price">$40</p>
-
-                                    </div><!-- text Finish -->
-                                </div>
-                                <!-- /.product-->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="lastName">Lastname <span>(required)</span></label>
+                                <input id="lastName" type="text" class="form-control" required>
                             </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="product same-height">
-                                    <div>
-                                        <a href="details.php">
-                                            <img class="img-fluid" src="Images/product-2.jpg" alt="Product 6">
-                                        </a>
-                                    </div>
-
-                                    <div class="text">
-                                        <!-- text Begin -->
-                                        <h3><a href="details.php">M-Dev Tank Top Women</a></h3>
-
-                                        <p class="price">$40</p>
-
-                                    </div><!-- text Finish -->
-                                </div>
-                                <!-- /.product-->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">Email <span>(required)</span></label>
+                                <input id="email" type="text" class="form-control" required>
                             </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="product same-height">
-                                    <div>
-                                        <a href="details.php">
-                                            <img class="img-fluid" src="Images/product-2.jpg" alt="Product 6">
-                                        </a>
-                                    </div>
-
-                                    <div class="text">
-                                        <!-- text Begin -->
-                                        <h3><a href="details.php">M-Dev Tank Top Women</a></h3>
-
-                                        <p class="price">$40</p>
-
-                                    </div><!-- text Finish -->
-                                </div>
-                                <!-- /.product-->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="subject">Subject <span>(required)</span> </label>
+                                <input id="subject" type="text" class="form-control" aria-required="">
                             </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="product same-height">
-                                    <div>
-                                        <a href="details.php">
-                                            <img class="img-fluid" src="Images/product-2.jpg" alt="Product 6">
-                                        </a>
-                                    </div>
-
-                                    <div class="text">
-                                        <!-- text Begin -->
-                                        <h3><a href="details.php">M-Dev Tank Top Women</a></h3>
-
-                                        <p class="price">$40</p>
-
-                                    </div><!-- text Finish -->
-                                </div>
-                                <!-- /.product-->
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="message">Message <span>(required)</span> </label>
+                                <textarea id="message" class="form-control" required></textarea>
                             </div>
-
-
-
-
-
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Send message</button>
                         </div>
                     </div>
-                </div>
+                    <!-- /.row-->
+                </form>
+            </div>
 
-
-
-            </div> <!-- row end -->
-        </div> <!-- container ends -->
-    </div> <!-- content ends -->
-    <?php
-    include("includes/footer.php");
-    ?>
+            <!-- /.col-md-9-->
+        </div>
+    </div>
+    </div>
+    
+    <script>
+        $(document).ready(function() {
+            $("#contact").validate();
+        })
+    </script>
 </body>
 
 </html>
