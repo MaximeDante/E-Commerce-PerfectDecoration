@@ -339,7 +339,10 @@
         </div>
     </div>
     </div>
-    
+    <?php
+    include("includes/footer.php");
+    ?>
+
     <script>
         $(document).ready(function() {
             $("#contact").validate();
