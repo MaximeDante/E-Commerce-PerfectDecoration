@@ -546,15 +546,7 @@ a, button {
 #content .headline{
     height: 305px;
 }
-.carousel-item{
-  height: 200px;
-} 
-.carousel-item img{
-  position: relative;
-    top: 0;
-    left: 0;
-    min-height: 500px;
-}
+
 
 
 

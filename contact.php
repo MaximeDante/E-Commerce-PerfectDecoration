@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- JQuery Library-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="js/jquery-simple-validator.min.js"></script>
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
@@ -20,6 +22,29 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="Styles/custom.css">
+
+
+    <style>
+        input:not([type="file"]).error,
+        textarea.error,
+        select.error {
+            border: 1px solid red !important;
+        }
+
+        input:not([type="file"]).no-error,
+        textarea.no-error,
+        select.no-error {
+            border: 1px solid green !important;
+        }
+
+        div.error-field {
+            color: red;
+            font-size: small;
+        }
+    </style>
+
+
+
 </head>
 
 <body>
@@ -72,7 +97,7 @@
 
         </div> <!-- top bar ends -->
         <nav class="navbar navbar-expand-lg">
-            <div class="container"><a href="index.php" class="navbar-brand home"><img src="Images/.jpg" alt="Obaju logo" class="d-none d-md-inline-block"><img src="Images/.jpg" alt="Obaju logo" class="d-inline-block d-md-none"><span class="sr-only">Obaju - go to homepage</span></a>
+            <div class="container"><a href="index.php" class="navbar-brand home"><img src="Images/.jpg" alt="PerferctDecoration logo" class="d-none d-md-inline-block"><img src="Images/.jpg" alt="PerferctDecoration logo" class="d-inline-block d-md-none"><span class="sr-only">PerferctDecoration - go to homepage</span></a>
                 <div class="navbar-buttons">
                     <button type="button" data-toggle="collapse" data-target="#navigation" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
                     <button type="button" data-toggle="collapse" data-target="#search" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></button><a href="basket.html" class="btn btn-outline-secondary navbar-toggler"><i class="fa fa-shopping-cart"></i></a>
@@ -295,35 +320,35 @@
                 </div>
                 <hr>
                 <h2>Contact form</h2>
-                <form action="contact.php" method="post" id="contact">
+                <form validate="true" action="contact.php" method="post" id="contact">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="firstName">Firstname <span>(required)</span></label>
+                                <label for="firstName">Firstname </label>
                                 <input id="firstName" type="text" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="lastName">Lastname <span>(required)</span></label>
+                                <label for="lastName">Lastname </label>
                                 <input id="lastName" type="text" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="email">Email <span>(required)</span></label>
+                                <label for="email">Email </label>
                                 <input id="email" type="text" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="subject">Subject <span>(required)</span> </label>
-                                <input id="subject" type="text" class="form-control" aria-required="">
+                                <label for="subject">Subject </label>
+                                <input id="subject" type="text" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="message">Message <span>(required)</span> </label>
+                                <label for="message">Message </label>
                                 <textarea id="message" class="form-control" required></textarea>
                             </div>
                         </div>
@@ -343,10 +368,13 @@
     include("includes/footer.php");
     ?>
 
+
+
+
     <script>
         $(document).ready(function() {
             $("#contact").validate();
-        })
+        });
     </script>
 </body>
 
