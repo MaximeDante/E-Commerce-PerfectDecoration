@@ -275,7 +275,6 @@
             </div>
         </div> <!-- search ends -->
     </header> <!-- Header ends -->
-
     <div id="content">
         <div class="container-fluid">
             <div class="col-lg-12">
@@ -283,99 +282,68 @@
                     <!-- Breadcrumb -->
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a class="br" href="index.php">Home</a></li>
-                        <li aria-current="page" class="breadcrumb-item active">Contact</li>
+                        <li aria-current="page" class="breadcrumb-item active">Register</li>
                     </ol>
                 </nav>
             </div>
+            <div class="conatiner">
+                <div class=" row same-height-row">
+                    <div class="col-lg-6">
+                        <div class="box same-height">
+                            <h1>Register</h1>
+                            <p class="lead">Not our registered customer yet?</p>
+                            <p>Get isnide access to the latest news and special offers</p>
+                            <p class="text-muted">If you have any enquiries, please feel free to <a href="contact.php">contact us</a>, We will try our best to get back to you.</p>
+                            <hr>
+                            <form validate="true" action="customer-orders.html" method="post" id="register" >
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input id="name" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input id="email" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input id="password" type="password" class="form-control" required>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-user-md"></i> Register</button>
+                                </div>
+                            </form>
 
-            <div id="contact" class="box">
-                <h1>Contact</h1>
-                <p class="lead">How can we help you? Are you curious about something or you have a problem with our products?</p>
-                <p>Please feel free to contact us, anytime you have an enquiry.</p>
-                <hr>
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3><i class="fa fa-map-marker"></i>Address</h3>
-                        <p>23 station road<br>12 Elvis Court<br>kenilworth<br>Cape Town<br><strong>South Africa</strong></p>
+
+
+                        </div>
                     </div>
-                    <!-- /.col-sm-4-->
-                    <div class="col-md-4">
-                        <h3><i class="fa fa-phone"></i> Call center</h3>
-                        <p class="text-muted">Standard rates apply for the calls</p>
-                        <p><strong>+27 61 0711289</strong></p>
+                    <div class="col-lg-6">
+                        <div class="box same height">
+                            <h1>Login</h1>
+                            <p class="lead">Already a customer?</p>
+                            <p class="text-muted">Enter your email and password to log into your account.</p>
+                            <hr>
+                            <form validate="true" action="customer-orders.html" method="post" id="login">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input id="email" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input id="password" type="password" class="form-control" required>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <!-- /.col-sm-4-->
-                    <div class="col-md-4">
-                        <h3><i class="fa fa-envelope"></i> Electronic support</h3>
-                        <p class="text-muted">Please feel free to write an email to us.</p>
-                        <p><strong><a href="mailto:">perfectdecoration@gmail.com</a></strong></p>
-                    </div>
-                    <!-- /.col-sm-4-->
                 </div>
-                <!-- /.row-->
-                <hr>
-                <div>
-                    <h3 class="text-center">Or, get in touch with us</h3>
-                    <p class="text-center text-muted">Complete the form below and send us a message</p>
-                </div>
-                <hr>
-                <h2>Contact form</h2>
-                <form validate="true" action="contact.php" method="post" id="contact">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="firstName">Firstname </label>
-                                <input id="firstName" type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="lastName">Lastname </label>
-                                <input id="lastName" type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="email">Email </label>
-                                <input id="email" type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="subject">Subject </label>
-                                <input id="subject" type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="message">Message </label>
-                                <textarea id="message" class="form-control" required></textarea>
-                            </div>
-                        </div>
-                        <div class="col-md-12 text-center">
-                            <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Send message</button>
-                        </div>
-                    </div>
-                    <!-- /.row-->
-                </form>
             </div>
-
-            <!-- /.col-md-9-->
         </div>
-    </div>
     </div>
     <?php
     include("includes/footer.php");
     ?>
-
-
-
-
-    <script>
-        $(document).ready(function() {
-            $("#contact").validate();
-        });
-    </script>
+    
 </body>
-
-</html>
