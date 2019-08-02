@@ -277,17 +277,18 @@
     </header> <!-- Header ends -->
     <div id="content">
         <div class="container-fluid">
-            <div class="col-lg-12">
-                <nav aria-label="breadcrumb">
-                    <!-- Breadcrumb -->
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a class="br" href="index.php">Home</a></li>
-                        <li aria-current="page" class="breadcrumb-item active">Register</li>
-                    </ol>
-                </nav>
-            </div>
-            <div class="conatiner">
-                <div class=" row same-height-row">
+            <div class=" row">
+                <div class="col-lg-12">
+                    <nav aria-label="breadcrumb">
+                        <!-- Breadcrumb -->
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="br" href="index.php">Home</a></li>
+                            <li aria-current="page" class="breadcrumb-item active">Register</li>
+                        </ol>
+                    </nav>
+                </div>
+                
+
                     <div class="col-lg-6">
                         <div class="box same-height">
                             <h1>Register</h1>
@@ -295,7 +296,7 @@
                             <p>Get isnide access to the latest news and special offers</p>
                             <p class="text-muted">If you have any enquiries, please feel free to <a href="contact.php">contact us</a>, We will try our best to get back to you.</p>
                             <hr>
-                            <form validate="true" action="customer-orders.html" method="post" id="register" >
+                            <form validate="true" action="customer-orders.html" method="post" id="register">
                                 <div class="form-group">
                                     <label for="name">Name</label>
                                     <input id="name" type="text" class="form-control" required>
@@ -345,5 +346,5 @@
     <?php
     include("includes/footer.php");
     ?>
-    
+
 </body>
