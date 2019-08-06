@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- JQuery Library-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="js/jquery-simple-validator.min.js"></script>
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
@@ -20,6 +22,29 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="Styles/custom.css">
+
+    <style>
+        input:not([type="file"]).error,
+        textarea.error,
+        select.error {
+            border: 1px solid red !important;
+        }
+
+        input:not([type="file"]).no-error,
+        textarea.no-error,
+        select.no-error {
+            border: 1px solid green !important;
+        }
+
+        div.error-field {
+            color: red;
+            font-size: small;
+        }
+    </style>
+
+
+
+
 </head>
 
 <body>
@@ -79,8 +104,8 @@
                 </div>
                 <div id="navigation" class="collapse navbar-collapse">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
-                        <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">Men<b class="caret"></b></a>
+                        <li class="nav-item"><a href="#" class="nav-link active ">Home</a></li>
+                        <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link ">Men<b class="caret"></b></a>
                             <ul class="dropdown-menu megamenu">
                                 <li>
                                     <div class="row">
@@ -252,17 +277,20 @@
     </header> <!-- Header ends -->
     <div id="content">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <nav aria-label="breadcrumb">
-                        <!-- Breadcrumb -->
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a class="br" href="index.php">Home</a></li>
-                            <li aria-current="page" class="breadcrumb-item active">Account</li>
-                        </ol>
-                    </nav>
-                </div>
+            <!-- container begins -->
+            <div class="col-lg-12">
+                <!-- col 12 begins -->
+                <nav aria-label="breadcrumb">
+                    <!-- Breadcrumb -->
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a class="br" href="index.php">Home</a></li>
+                        <li aria-current="page" class="breadcrumb-item active">My Account</li>
+                    </ol>
+                </nav>
 
+            </div> <!-- col 12 ends breadcrumb -->
+            <div class="row">
+                <!-- row begin -->
                 <div class="col-lg-3">
                     <!-- col 3 begins -->
                     <?php
@@ -270,10 +298,55 @@
                     ?>
 
                 </div> <!-- col 3 ends -->
+                <div class="col-lg-9">
+                    <div class="box">
+                        <?php
+                        if (isset($_GET['my_orders'])) {
+                            include("my_orders.php");
+                        }
+                        ?>
+                        <?php
+
+                        if (isset($_GET['pay_offline'])) {
+                            include("pay_offline.php");
+                        }
+
+                        ?>
+                        <?php
+
+                        if (isset($_GET['edit_account'])) {
+                            include("edit_account.php");
+                        }
+
+                        ?>
+                        <?php
+
+                        if (isset($_GET['change_pass'])) {
+                            include("change_pass.php");
+                        }
+
+                        ?>
+
+                        <?php
+
+                        if (isset($_GET['delete_account'])) {
+                            include("delete_account.php");
+                        }
+
+                        ?>
+                    </div>
+                </div>
+
+
+
+
+
             </div>
         </div>
+    </div>
     </div>
     <?php
     include("includes/footer.php");
     ?>
+
 </body>
