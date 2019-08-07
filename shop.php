@@ -285,12 +285,12 @@
                         <div class="col-md-4 col-sm-6 responsive ">
                             <div class="product">
                                 <a href="details.php">
-                                    <img class="img-fluid" src="Images/product-2.jpg" alt="Product1">
+                                    <img class="img-fluid" src="Images/p1.jpg" alt="Product1">
                                 </a>
                                 <div class="text">
                                     <h3>
                                         <a href="details.php">
-                                            Earings
+                                            Assorted HBD Balloon
                                         </a>
                                     </h3>
                                     <p class="price">R100</p>
@@ -309,12 +309,12 @@
                         <div class="col-md-4 col-sm-6 responsive">
                             <div class="product">
                                 <a href="details.php">
-                                    <img class="img-fluid" src="Images/product-2.jpg" alt="Product1">
+                                    <img class="img-fluid" src="Images/p2.jpg" alt="Product1">
                                 </a>
                                 <div class="text">
                                     <h3>
                                         <a href="details.php">
-                                            Earings
+                                            Assorted HBD Balloon
                                         </a>
                                     </h3>
                                     <p class="price">R100</p>
@@ -334,12 +334,12 @@
                         <div class="col-md-4 col-sm-6 responsive">
                             <div class="product">
                                 <a href="details.php">
-                                    <img class="img-fluid" src="Images/product-2.jpg" alt="Product1">
+                                    <img class="img-fluid" src="Images/p3.jpg" alt="Product1">
                                 </a>
                                 <div class="text">
                                     <h3>
                                         <a href="details.php">
-                                            Earings
+                                            Assorted HBD Balloon
                                         </a>
                                     </h3>
                                     <p class="price">R100</p>
@@ -358,12 +358,12 @@
                         <div class="col-md-4 col-sm-6 responsive">
                             <div class="product">
                                 <a href="details.php">
-                                    <img class="img-fluid" src="Images/product-2.jpg" alt="Product1">
+                                    <img class="img-fluid" src="Images/p1.jpg" alt="Product1">
                                 </a>
                                 <div class="text">
                                     <h3>
                                         <a href="details.php">
-                                            Earings
+                                            Assorted HBD Balloon
                                         </a>
                                     </h3>
                                     <p class="price">R100</p>
@@ -382,12 +382,12 @@
                         <div class="col-md-4 col-sm-6 responsive">
                             <div class="product">
                                 <a href="details.php">
-                                    <img class="img-fluid" src="Images/product-2.jpg" alt="Product1">
+                                    <img class="img-fluid" src="Images/p2.jpg" alt="Product1">
                                 </a>
                                 <div class="text">
                                     <h3>
                                         <a href="details.php">
-                                            Earings
+                                            Assorted HBD Balloon
                                         </a>
                                     </h3>
                                     <p class="price">R100</p>
@@ -406,12 +406,12 @@
                         <div class="col-md-4 col-sm-6 responsive">
                             <div class="product">
                                 <a href="details.php">
-                                    <img class="img-fluid" src="Images/product-2.jpg" alt="Product1">
+                                    <img class="img-fluid" src="Images/p3.jpg" alt="Product1">
                                 </a>
                                 <div class="text">
                                     <h3>
                                         <a href="details.php">
-                                            Earings
+                                            Assorted HBD Balloon
                                         </a>
                                     </h3>
                                     <p class="price">R100</p>
