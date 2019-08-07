@@ -277,7 +277,7 @@
                 <div class="col-lg-9 ">
                     <div id="productMain" class="row">
 
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div id="mainImage">
                                 <!-- col-sm-6 Begin -->
 
@@ -295,13 +295,13 @@
                                     <!-- The slideshow -->
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="Images/a1.jpg" alt="slider1" class="img-fluid" >
+                                            <img src="Images/image3.jpg" alt="slider1" class="img-fluid" >
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="Images/a1.jpg" alt="slider2" class="img-fluid" >
+                                            <img src="Images/image3.jpg" alt="slider2" class="img-fluid" >
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="Images/a1.jpg" alt="slider3" class="img-fluid" >
+                                            <img src="Images/image3.jpg" alt="slider3" class="img-fluid" >
                                         </div>
                                     </div>
 
@@ -315,7 +315,7 @@
                                 </div><!-- carousel Finish -->
                             </div> <!-- mainImage Finish -->
                         </div> <!-- col-sm-6 end -->
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <!-- col-sm-6 Begin -->
                             <div class="box">
                                 <!-- box Begin -->
@@ -323,11 +323,11 @@
                                 <div class="container-fliud">
                                     <form action="details.php" class="form-horizontal" method="post">
                                         <!-- form-horizontal Begin -->
-                                        <div class="row form-group">
+                                        <div class=" align-content-center">
                                             <!-- form-group Begin -->
-                                            <label for="" class="col-lg-5 ">Products Quantity</label>
+                                            <label for="" class="">Products Quantity</label>
 
-                                            <div class="col-lg-7">
+                                            
                                                 <!-- col-md-7 Begin -->
                                                 <select name="product_qty" id="" class="form-control">
                                                     <!-- select Begin -->
@@ -338,16 +338,15 @@
                                                     <option>5</option>
                                                 </select><!-- select Finish -->
 
-                                            </div><!-- col-md-7 Finish -->
+                                           
 
                                         </div><!-- form-group Finish -->
 
-                                        <div class="form-group row">
+                                        <div class="">
                                             <!-- form-group Begin -->
-                                            <label class="col-lg-5 control-label ">Product Size</label>
+                                            <label class="">Product Size</label>
 
-                                            <div class="col-lg-7">
-                                                <!-- col-md-7 Begin -->
+                                            
 
                                                 <select name="product_size" class="form-control">
                                                     <!-- form-control Begin -->
@@ -359,7 +358,7 @@
 
                                                 </select><!-- form-control Finish -->
 
-                                            </div><!-- col-md-7 Finish -->
+                                            
                                         </div><!-- form-group Finish -->
 
                                         <p class="price">$50</p>
@@ -370,20 +369,7 @@
                                 </div>
 
                             </div><!-- box Finish -->
-                            <div id="thumbs" class="row">
-                                <div class="col-lg-4 column">
-                                    <a href="#" class="owl-thumb-item"><img src="Images/a1.jpg" alt="" class="img-fluid"></a>
-
-                                </div>
-                                <div class="col-lg-4 column">
-                                    <a href="#" class="owl-thumb-item"><img src="Images/a1.jpg" alt="" class="img-fluid"></a>
-
-                                </div>
-                                <div class="col-lg-4 column">
-                                    <a href="#" class="owl-thumb-item"><img src="Images/a1.jpg" alt="" class="img-fluid"></a>
-
-                                </div>
-                            </div>
+                            
 
                         </div><!-- col-sm-6 Finish -->
 
@@ -414,7 +400,7 @@
                         <div class="row same-height-row">
                             <div class="col-md-12">
                                 <div class="box same-height">
-                                    <h3>You may also like these products </h3>
+                                    <h3 class="text-center">Related products </h3>
                                 </div>
                             </div>
 
@@ -422,7 +408,7 @@
                                 <div class="product same-height">
                                     <div>
                                         <a href="details.php">
-                                            <img class="img-fluid" src="Images/product-2.jpg" alt="Product 6">
+                                            <img class="img-fluid" src="Images/p1.jpg" alt="Product 6">
                                         </a>
                                     </div>
 
@@ -440,7 +426,7 @@
                                 <div class="product same-height">
                                     <div>
                                         <a href="details.php">
-                                            <img class="img-fluid" src="Images/product-2.jpg" alt="Product 6">
+                                            <img class="img-fluid" src="Images/p1.jpg" alt="Product 6">
                                         </a>
                                     </div>
 
@@ -458,7 +444,7 @@
                                 <div class="product same-height">
                                     <div>
                                         <a href="details.php">
-                                            <img class="img-fluid" src="Images/product-2.jpg" alt="Product 6">
+                                            <img class="img-fluid" src="Images/p1.jpg" alt="Product 6">
                                         </a>
                                     </div>
 
@@ -476,7 +462,7 @@
                                 <div class="product same-height">
                                     <div>
                                         <a href="details.php">
-                                            <img class="img-fluid" src="Images/product-2.jpg" alt="Product 6">
+                                            <img class="img-fluid" src="Images/p1.jpg" alt="Product 6">
                                         </a>
                                     </div>
 
