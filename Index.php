@@ -1,3 +1,6 @@
+<?php
+include("includes/db.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,8 +76,8 @@
         </div> <!-- top bar ends -->
         <nav class="navbar navbar-expand-lg ">
             <div class="container">
-                <a class="navbar-brand home" href="index.php" >
-                    <img src="Images/Logo.jpg" >
+                <a class="navbar-brand home" href="index.php">
+                    <img src="Images/Logo.jpg">
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" data-toggle="collapse" data-target="#navigation" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
@@ -91,24 +94,24 @@
                                             <h5>Men</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Woman</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Accessories</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
-                                       
+
                                     </div>
                                 </li>
                             </ul>
@@ -121,23 +124,23 @@
                                             <h5>Men</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                               
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Women</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Kids</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
-                                            
+
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <div class="banner"><a href="#"><img src="img/banner.jpg" alt="" class="img img-fluid"></a></div>
@@ -155,28 +158,28 @@
                                             <h5>Party Decor</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="index.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Tableware</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="register.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Glasware</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="basket.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Balloons</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="blog.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -217,19 +220,37 @@
                     <li data-target="#demo" data-slide-to="0" class="active"></li>
                     <li data-target="#demo" data-slide-to="1"></li>
                     <li data-target="#demo" data-slide-to="2"></li>
+                    <li data-target="#demo" data-slide-to="3"></li>
                 </ul>
 
                 <!-- The slideshow -->
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="Images/image1.jpg" alt="slider1" width="1100" height="500" class="img-fluid">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="Images/image7.jpg" alt="slider2" width="1100" height="500" class="img-fluid">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="Images/image3.jpg" alt="slider3" width="1100" height="500" class="img-fluid">
-                    </div>
+                    <?php
+                    $get_slides = "select * from slider LIMIT 0,1";
+                    $run_slides = mysqli_query($con, $get_slides);
+                    while ($row_slides = mysqli_fetch_array($run_slides)) {
+                        $slide_name = $row_slides['slide_name'];
+                        $slide_image = $row_slides['slide_image'];
+                        echo "
+                             <div class='carousel-item active'>
+                             <img src='Images/$slide_image'>
+                             </div>
+                        
+                        ";
+                    }
+                    $get_slides = "select * from slider LIMIT 1,3";
+                    $run_slides = mysqli_query($con, $get_slides);
+                    while ($row_slides = mysqli_fetch_array($run_slides)) {
+                        $slide_name = $row_slides['slide_name'];
+                        $slide_image = $row_slides['slide_image'];
+                        echo "
+                             <div class='carousel-item '>
+                             <img src='Images/$slide_image'>
+                             </div>
+                        
+                        ";
+                    }
+                    ?>
                 </div>
 
                 <!-- Left and right controls -->
@@ -300,7 +321,7 @@
                     <div class="text">
                         <h3>
                             <a href="details.php">
-                            Assorted HBD Balloon
+                                Assorted HBD Balloon
                             </a>
                         </h3>
                         <p class="price">R100</p>
@@ -325,7 +346,7 @@
                     <div class="text">
                         <h3>
                             <a href="details.php">
-                            Assorted HBD Balloon
+                                Assorted HBD Balloon
                             </a>
                         </h3>
                         <p class="price">R100</p>
@@ -350,7 +371,7 @@
                     <div class="text">
                         <h3>
                             <a href="details.php">
-                            Assorted HBD Balloon
+                                Assorted HBD Balloon
                             </a>
                         </h3>
                         <p class="price">R100</p>
@@ -375,7 +396,7 @@
                     <div class="text">
                         <h3>
                             <a href="details.php">
-                            Assorted HBD Balloon
+                                Assorted HBD Balloon
                             </a>
                         </h3>
                         <p class="price">R100</p>
@@ -400,7 +421,7 @@
                     <div class="text">
                         <h3>
                             <a href="details.php">
-                            Assorted HBD Balloon
+                                Assorted HBD Balloon
                             </a>
                         </h3>
                         <p class="price">R100</p>
@@ -425,7 +446,7 @@
                     <div class="text">
                         <h3>
                             <a href="details.php">
-                            Assorted HBD Balloon
+                                Assorted HBD Balloon
                             </a>
                         </h3>
                         <p class="price">R100</p>
@@ -450,7 +471,7 @@
                     <div class="text">
                         <h3>
                             <a href="details.php">
-                            Assorted HBD Balloon
+                                Assorted HBD Balloon
                             </a>
                         </h3>
                         <p class="price">R100</p>
@@ -475,7 +496,7 @@
                     <div class="text">
                         <h3>
                             <a href="details.php">
-                               Assorted HBD Balloon
+                                Assorted HBD Balloon
                             </a>
                         </h3>
                         <p class="price">R100</p>

@@ -7,38 +7,38 @@
             <div class="col-lg-3 col-md-6">
                 <h4 class="mb-3">Pages</h4>
                 <ul class="list-unstyled">
-                    <li><a href="text.html">About us</a></li>
-                    <li><a href="text.html">Terms and conditions</a></li>
+                    <li><a href="text.html">Home</a></li>
+                    <li><a href="text.html"></a></li>
                     <li><a href="contact.html">Contact us</a></li>
                 </ul>
                 <hr>
                 <h4 class="mb-3">User section</h4>
                 <ul class="list-unstyled">
                     <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
-                    <li><a href="register.html">Regiter</a></li>
+                    <li><a href="register.html">Register</a></li>
                 </ul>
             </div>
             <!-- /.col-lg-3-->
             <div class="col-lg-3 col-md-6">
                 <h4 class="mb-3">Top Products categories</h4>
-                <h5>Men</h5>
+                <h5>Birthday</h5>
                 <ul class="list-unstyled">
-                    <li><a href="category.html">T-shirts</a></li>
-                    <li><a href="category.html">Shirts</a></li>
-                    <li><a href="category.html">Accessories</a></li>
+                    <li><a href="category.html">Men</a></li>
+                    <li><a href="category.html">Women</a></li>
+                    <li><a href="category.html">Category</a></li>
                 </ul>
-                <h5>Ladies</h5>
+                <h5>Party Supplies</h5>
                 <ul class="list-unstyled">
-                    <li><a href="category.html">T-shirts</a></li>
-                    <li><a href="category.html">Skirts</a></li>
-                    <li><a href="category.html">Pants</a></li>
-                    <li><a href="category.html">Accessories</a></li>
+                    <li><a href="category.html">Party Decor</a></li>
+                    <li><a href="category.html">Tableware</a></li>
+                    <li><a href="category.html">Glassware</a></li>
+                    <li><a href="category.html">Balloons</a></li>
                 </ul>
             </div>
             <!-- /.col-lg-3-->
             <div class="col-lg-3 col-md-6">
                 <h4 class="mb-3">Where to find us</h4>
-                <p><strong>Obaju Ltd.</strong><br>13/25 New Avenue<br>New Heaven<br>45Y 73J<br>England<br><strong>Great Britain</strong></p><a href="contact.html">Go to contact page</a>
+                <p><strong>23 Station Road</strong><br>12 Elvis Court<br>Kenilworth<br>Capr Town<br><strong>South Africa</strong></p><a href="contact.html">Go to contact page</a>
                 <hr class="d-block d-md-none">
             </div>
             <!-- /.col-lg-3-->
@@ -53,8 +53,8 @@
                     <!-- /input-group-->
                 </form>
                 <hr>
-                <h4 class="mb-3">Stay in touch</h4>
-                <p class="social"><a href="#" class=""><i class="fa fa-facebook"></i></a><a href="#" class="twitter external"><i class="fa fa-twitter"></i></a><a href="#" class="instagram external"><i class="fa fa-instagram"></i></a><a href="#" class="gplus external"><i class="fa fa-google-plus"></i></a><a href="#" class="email external"><i class="fa fa-envelope"></i></a></p>
+               <!-- <h4 class="mb-3">Stay in touch</h4>
+                <p class="social"><a href="#" class=""><i class="fa fa-facebook"></i></a><a href="#" class="twitter external"><i class="fa fa-twitter"></i></a><a href="#" class="instagram external"><i class="fa fa-instagram"></i></a><a href="#" class="gplus external"><i class="fa fa-google-plus"></i></a><a href="#" class="email external"><i class="fa fa-envelope"></i></a></p> -->
 
             </div>
         </div> <!-- row ends -->

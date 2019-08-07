@@ -20,6 +20,40 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="Styles/custom.css">
+
+    <style>
+        #content #cart .table tbody tr td img {
+            width: 50px;
+        }
+
+        #content #cart .table tbody tr td input {
+            width: 40px;
+            text-align: right;
+        }
+
+        #content #cart .table tbody tr td {
+            vertical-align: middle;
+        }
+
+        #content #cart .table tfoot {
+            font-size: 18px;
+        }
+
+        #content #order-summary table {
+            margin-top: 20px;
+        }
+
+        #content #order-summary table td {
+            color: #999999;
+        }
+
+        #content #order-summary table tr.total td,
+        #content #order-summary table tr.total th {
+            font-size: 18px;
+            color: #555555;
+            font-weight: 700;
+        }
+    </style>
 </head>
 
 <body>
@@ -220,10 +254,233 @@
                 </nav>
 
             </div> <!-- col 12 ends breadcrumb -->
+            <div class="row">
+                <!-- row begins -->
+                <div id="cart" class="col-lg-9">
+                    <!-- col 9 begins -->
+                    <div class="box">
+                        <form method="post" action="cart.php" enctype="multipart/form-data">
+                            <h1>Shopping cart</h1>
+                            <p class="text-muted">You currently have 1 item(s) in your cart.</p>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Product</th>
+                                            <th>Quantity</th>
+                                            <th>Unit price</th>
+                                            <th>Size</th>
+                                            <th colspan="1">Delete</th>
+                                            <th colspan="2">Sub Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="#"><img class="img-fluid" src="Images/p1.jpg" alt="product1"></a></td>
+                                            <td><a href="#">Assorted HBD Balloons</a></td>
+                                            <td>
+                                                2
+                                            </td>
+                                            <td>R50</td>
+                                            <td>Large</td>
+                                            <td>
+                                                <input type="checkbox" name="remove[]">
+                                            </td>
+                                            <td>
+                                                R100
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="#"><img class="img-fluid" src="Images/p1.jpg" alt="product1"></a></td>
+                                            <td><a href="#">Assorted HBD Balloons</a></td>
+                                            <td>
+                                                2
+                                            </td>
+                                            <td>R50</td>
+                                            <td>Large</td>
+                                            <td>
+                                                <input type="checkbox" name="remove[]">
+                                            </td>
+                                            <td>
+                                                R100
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="#"><img class="img-fluid" src="Images/p1.jpg" alt="product1"></a></td>
+                                            <td><a href="#">Assorted HBD Balloons</a></td>
+                                            <td>
+                                                2
+                                            </td>
+                                            <td>R50</td>
+                                            <td>Large</td>
+                                            <td>
+                                                <input type="checkbox" name="remove[]">
+                                            </td>
+                                            <td>
+                                                R100
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th colspan="5">Total</th>
+                                            <th colspan="2">$446.00</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive-->
+                            <div class="box-footer d-flex justify-content-between flex-column flex-lg-row">
+                                <div class="left"><a href="index.php" class="btn btn-outline-secondary"><i class="fa fa-chevron-left"></i> Continue shopping</a></div>
+                                <div class="right">
+                                    <button type="submit" name="update" value="Update cart" class="btn btn-outline-secondary"><i class="fa fa-refresh"></i> Update cart</button>
+                                    <a href="checkout.php" class="btn btn-primary">
+
+                                        Proceed To checkout <i class="fa fa-chevron-right"></i>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="container">
+                        <div class="row same-height-row">
+                            <div class="col-md-12">
+                                <div class="box same-height">
+                                    <h3 class="text-center">Related products </h3>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product same-height">
+                                    <div>
+                                        <a href="details.php">
+                                            <img class="img-fluid" src="Images/p1.jpg" alt="Product 6">
+                                        </a>
+                                    </div>
+
+                                    <div class="text">
+                                        <!-- text Begin -->
+                                        <h3><a href="details.php">Assorted HBD Balloons</a></h3>
+
+                                        <p class="price">$40</p>
+
+                                    </div><!-- text Finish -->
+                                </div>
+                                <!-- /.product-->
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product same-height">
+                                    <div>
+                                        <a href="details.php">
+                                            <img class="img-fluid" src="Images/p1.jpg" alt="Product 6">
+                                        </a>
+                                    </div>
+
+                                    <div class="text">
+                                        <!-- text Begin -->
+                                        <h3><a href="details.php">Assorted HBD Balloons</a></h3>
+
+                                        <p class="price">$40</p>
+
+                                    </div><!-- text Finish -->
+                                </div>
+                                <!-- /.product-->
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product same-height">
+                                    <div>
+                                        <a href="details.php">
+                                            <img class="img-fluid" src="Images/p1.jpg" alt="Product 6">
+                                        </a>
+                                    </div>
+
+                                    <div class="text">
+                                        <!-- text Begin -->
+                                        <h3><a href="details.php">Assorted HBD Balloons</a></h3>
+
+                                        <p class="price">$40</p>
+
+                                    </div><!-- text Finish -->
+                                </div>
+                                <!-- /.product-->
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product same-height">
+                                    <div>
+                                        <a href="details.php">
+                                            <img class="img-fluid" src="Images/p1.jpg" alt="Product 6">
+                                        </a>
+                                    </div>
+
+                                    <div class="text">
+                                        <!-- text Begin -->
+                                        <h3><a href="details.php">Assorted HBD Balloons</a></h3>
+
+                                        <p class="price">$40</p>
+
+                                    </div><!-- text Finish -->
+                                </div>
+                                <!-- /.product-->
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+
+                </div> <!-- col 9 ends -->
+                <div class="col-lg-3">
+                    <div id="order-summary" class="card">
+                        <div class="card-header">
+                            <h3>Order summary</h3>
+                            <p class="text-muted">Shipping and additional costs are calculated based on the values you have entered.</p>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>Order subtotal</td>
+                                        <th>$446.00</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Shipping and handling</td>
+                                        <th>$10.00</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Tax</td>
+                                        <th>$0.00</th>
+                                    </tr>
+                                    <tr class="total">
+                                        <td>Total</td>
+                                        <th>$456.00</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div> <!-- row ends -->
         </div> <!-- container ends -->
     </div> <!-- content ends -->
     <?php
     include("includes/footer.php");
     ?>
 </body>
+
 </html>
