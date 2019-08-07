@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- JQuery Library-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
-    <script src="js/jquery-simple-validator.min.js"></script>
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
@@ -22,7 +20,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="Styles/custom.css">
-
     <style>
         input:not([type="file"]).error,
         textarea.error,
@@ -41,9 +38,6 @@
             font-size: small;
         }
     </style>
-
-
-
 
 </head>
 
@@ -96,104 +90,73 @@
 
 
         </div> <!-- top bar ends -->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container"><a href="index.php" class="navbar-brand home"><img src="Images/.jpg" alt="PerferctDecoration logo" class="d-none d-md-inline-block"><img src="Images/.jpg" alt="PerferctDecoration logo" class="d-inline-block d-md-none"><span class="sr-only">PerferctDecoration - go to homepage</span></a>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand home" href="index.php">
+                    <img src="Images/perfect.jpg">
+                </a>
                 <div class="navbar-buttons">
                     <button type="button" data-toggle="collapse" data-target="#navigation" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
                     <button type="button" data-toggle="collapse" data-target="#search" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></button><a href="basket.html" class="btn btn-outline-secondary navbar-toggler"><i class="fa fa-shopping-cart"></i></a>
                 </div>
                 <div id="navigation" class="collapse navbar-collapse">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a href="#" class="nav-link active ">Home</a></li>
-                        <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link ">Men<b class="caret"></b></a>
+                        <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                        <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">Weddings<b class="caret"></b></a>
                             <ul class="dropdown-menu megamenu">
                                 <li>
                                     <div class="row">
                                         <div class="col-md-6 col-lg-3">
-                                            <h5>Clothing</h5>
+                                            <h5>Men</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">T-shirts</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Shirts</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Pants</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Accessories</a></li>
+                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
-                                            <h5>Shoes</h5>
+                                            <h5>Woman</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Trainers</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Sandals</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Hiking shoes</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Casual</a></li>
+                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Accessories</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Trainers</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Sandals</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Hiking shoes</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Casual</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Hiking shoes</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Casual</a></li>
+                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+
                                             </ul>
                                         </div>
-                                        <div class="col-md-6 col-lg-3">
-                                            <h5>Featured</h5>
-                                            <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Trainers</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Sandals</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Hiking shoes</a></li>
-                                            </ul>
-                                            <h5>Looks and trends</h5>
-                                            <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Trainers</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Sandals</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Hiking shoes</a></li>
-                                            </ul>
-                                        </div>
+
                                     </div>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">Ladies<b class="caret"></b></a>
+                        <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">Birthday<b class="caret"></b></a>
                             <ul class="dropdown-menu megamenu">
                                 <li>
                                     <div class="row">
                                         <div class="col-md-6 col-lg-3">
-                                            <h5>Clothing</h5>
+                                            <h5>Men</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">T-shirts</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Shirts</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Pants</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Accessories</a></li>
+                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
-                                            <h5>Shoes</h5>
+                                            <h5>Women</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Trainers</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Sandals</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Hiking shoes</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Casual</a></li>
+                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
-                                            <h5>Accessories</h5>
+                                            <h5>Kids</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Trainers</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Sandals</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Hiking shoes</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Casual</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Hiking shoes</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Casual</a></li>
+                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+
                                             </ul>
-                                            <h5>Looks and trends</h5>
-                                            <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Trainers</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Sandals</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Hiking shoes</a></li>
-                                            </ul>
+
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <div class="banner"><a href="#"><img src="img/banner.jpg" alt="" class="img img-fluid"></a></div>
@@ -203,50 +166,36 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">Template<b class="caret"></b></a>
+                        <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">Party supplies<b class="caret"></b></a>
                             <ul class="dropdown-menu megamenu">
                                 <li>
                                     <div class="row">
                                         <div class="col-md-6 col-lg-3">
-                                            <h5>Shop</h5>
+                                            <h5>Party Decor</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="index.html" class="nav-link">Homepage</a></li>
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Category - sidebar left</a></li>
-                                                <li class="nav-item"><a href="category-right.html" class="nav-link">Category - sidebar right</a></li>
-                                                <li class="nav-item"><a href="category-full.html" class="nav-link">Category - full width</a></li>
-                                                <li class="nav-item"><a href="detail.html" class="nav-link">Product detail</a></li>
+                                                <li class="nav-item"><a href="index.html" class="nav-link">Decor</a></li>
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
-                                            <h5>User</h5>
+                                            <h5>Tableware</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="register.html" class="nav-link">Register / login</a></li>
-                                                <li class="nav-item"><a href="customer-orders.html" class="nav-link">Orders history</a></li>
-                                                <li class="nav-item"><a href="customer-order.html" class="nav-link">Order history detail</a></li>
-                                                <li class="nav-item"><a href="customer-wishlist.html" class="nav-link">Wishlist</a></li>
-                                                <li class="nav-item"><a href="customer-account.html" class="nav-link">Customer account / change password</a></li>
+                                                <li class="nav-item"><a href="register.html" class="nav-link">Decor</a></li>
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
-                                            <h5>Order process</h5>
+                                            <h5>Glasware</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="basket.html" class="nav-link">Shopping cart</a></li>
-                                                <li class="nav-item"><a href="checkout1.html" class="nav-link">Checkout - step 1</a></li>
-                                                <li class="nav-item"><a href="checkout2.html" class="nav-link">Checkout - step 2</a></li>
-                                                <li class="nav-item"><a href="checkout3.html" class="nav-link">Checkout - step 3</a></li>
-                                                <li class="nav-item"><a href="checkout4.html" class="nav-link">Checkout - step 4</a></li>
+                                                <li class="nav-item"><a href="basket.html" class="nav-link">Decor</a></li>
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
-                                            <h5>Pages and blog</h5>
+                                            <h5>Balloons</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="blog.html" class="nav-link">Blog listing</a></li>
-                                                <li class="nav-item"><a href="post.html" class="nav-link">Blog Post</a></li>
-                                                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-                                                <li class="nav-item"><a href="text.html" class="nav-link">Text page</a></li>
-                                                <li class="nav-item"><a href="text-right.html" class="nav-link">Text page - right sidebar</a></li>
-                                                <li class="nav-item"><a href="404.html" class="nav-link">404 page</a></li>
-                                                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                                                <li class="nav-item"><a href="blog.html" class="nav-link">Decor</a></li>
+
                                             </ul>
                                         </div>
                                     </div>
@@ -306,33 +255,25 @@
                         }
                         ?>
                         <?php
-
                         if (isset($_GET['pay_offline'])) {
                             include("pay_offline.php");
                         }
-
                         ?>
                         <?php
-
                         if (isset($_GET['edit_account'])) {
                             include("edit_account.php");
                         }
-
                         ?>
                         <?php
-
                         if (isset($_GET['change_pass'])) {
                             include("change_pass.php");
                         }
-
                         ?>
 
                         <?php
-
                         if (isset($_GET['delete_account'])) {
                             include("delete_account.php");
                         }
-
                         ?>
                     </div>
                 </div>
@@ -350,3 +291,5 @@
     ?>
 
 </body>
+
+</html>
