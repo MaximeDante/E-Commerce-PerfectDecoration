@@ -1,6 +1,41 @@
 <?php
 include("includes/db.php");
+include("Functions/functions.php");
+?>
+<?php
 
+if (isset($_GET['pro_id'])) {
+
+    $product_id = $_GET['pro_id'];
+
+    $get_product = "select * from products where product_id='$product_id'";
+
+    $run_product = mysqli_query($con, $get_product);
+
+    $row_product = mysqli_fetch_array($run_product);
+
+    $p_cat_id = $row_product['p_cat_id'];
+
+    $pro_title = $row_product['product_title'];
+
+    $pro_price = $row_product['product_price'];
+
+    $pro_desc = $row_product['product_desc'];
+
+    $pro_img1 = $row_product['product_img1'];
+
+    $pro_img2 = $row_product['product_img2'];
+
+    $pro_img3 = $row_product['product_img3'];
+
+    $get_p_cat = "select * from product_categories where p_cat_id='$p_cat_id'";
+
+    $run_p_cat = mysqli_query($con, $get_p_cat);
+
+    $row_p_cat = mysqli_fetch_array($run_p_cat);
+
+    $p_cat_title = $row_p_cat['p_cat_title'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,12 +89,13 @@ include("includes/db.php");
         <div id="top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" class="btn btn-success btn-sm">Welcome</a><a href="#" class="ml-1">4 Items In Your Cart | Total Price: $300</a></div>
+                    <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" class="btn btn-success btn-sm">Welcome</a><a href="checkout.php" class="ml-1"> <?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?></a></div>
                     <div class="col-lg-6 text-center text-lg-right">
                         <ul class="menu list-inline mb-0">
                             <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
                             <li class="list-inline-item"><a href="register.html">Register</a></li>
                             <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+                            <li class="list-inline-item"><a href="contact.html">Abous US</a></li>
 
                         </ul>
                     </div>
@@ -210,7 +246,7 @@ include("includes/db.php");
                     <div class="navbar-buttons d-flex justify-content-end">
                         <!-- /.nav-collapse-->
                         <div id="search-not-mobile" class="navbar-collapse collapse"></div><a data-toggle="collapse" href="#search" class="btn navbar-btn btn-primary d-none d-lg-inline-block"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></a>
-                        <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block"><a href="basket.html" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span>0 items in your cart</span></a></div>
+                        <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block"><a href="basket.html" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span> <?php items(); ?> items in your cart</span></a></div>
                     </div>
                 </div>
             </div>
