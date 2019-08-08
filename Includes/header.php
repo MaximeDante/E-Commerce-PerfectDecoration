@@ -14,8 +14,6 @@ include("Functions/functions.php");
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- JQuery Library-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
-    <script src="js/jquery-simple-validator.min.js"></script>
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
@@ -26,33 +24,10 @@ include("Functions/functions.php");
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="Styles/custom.css">
-
-
-    <style>
-        input:not([type="file"]).error,
-        textarea.error,
-        select.error {
-            border: 1px solid red !important;
-        }
-
-        input:not([type="file"]).no-error,
-        textarea.no-error,
-        select.no-error {
-            border: 1px solid green !important;
-        }
-
-        div.error-field {
-            color: red;
-            font-size: small;
-        }
-    </style>
-
-
-
 </head>
 
 <body>
-<header class="header mb-5">
+    <header class="header mb-5">
         <!--
       *** TOPBAR ***
       _________________________________________________________
@@ -102,8 +77,8 @@ include("Functions/functions.php");
         </div> <!-- top bar ends -->
         <nav class="navbar navbar-expand-lg ">
             <div class="container">
-                <a class="navbar-brand home" href="index.php" >
-                    <img src="Images/Logo.jpg" >
+                <a class="navbar-brand home" href="index.php">
+                    <img src="Images/Logo.jpg">
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" data-toggle="collapse" data-target="#navigation" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
@@ -111,7 +86,7 @@ include("Functions/functions.php");
                 </div>
                 <div id="navigation" class="collapse navbar-collapse">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="#" class=" <?php if($active == 'Home') echo " nav-link active"; ?>">Home</a></li>
                         <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">Weddings<b class="caret"></b></a>
                             <ul class="dropdown-menu megamenu">
                                 <li>
@@ -120,24 +95,24 @@ include("Functions/functions.php");
                                             <h5>Men</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Woman</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Accessories</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
-                                       
+
                                     </div>
                                 </li>
                             </ul>
@@ -150,23 +125,23 @@ include("Functions/functions.php");
                                             <h5>Men</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                               
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Women</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Kids</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
-                                            
+
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <div class="banner"><a href="#"><img src="img/banner.jpg" alt="" class="img img-fluid"></a></div>
@@ -184,28 +159,28 @@ include("Functions/functions.php");
                                             <h5>Party Decor</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="index.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Tableware</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="register.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Glasware</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="basket.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Balloons</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="blog.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -234,107 +209,3 @@ include("Functions/functions.php");
             </div>
         </div> <!-- search ends -->
     </header> <!-- Header ends -->
-
-    <div id="content">
-        <div class="container-fluid">
-            <div class="col-lg-12">
-                <nav aria-label="breadcrumb">
-                    <!-- Breadcrumb -->
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a class="br" href="index.php">Home</a></li>
-                        <li aria-current="page" class="breadcrumb-item active">Contact</li>
-                    </ol>
-                </nav>
-            </div>
-
-            <div id="contact" class="box">
-                <h1>Contact</h1>
-                <p class="lead">How can we help you? Are you curious about something or you have a problem with our products?</p>
-                <p>Please feel free to contact us, anytime you have an enquiry.</p>
-                <hr>
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3><i class="fa fa-map-marker"></i>Address</h3>
-                        <p>23 station road<br>12 Elvis Court<br>kenilworth<br>Cape Town<br><strong>South Africa</strong></p>
-                    </div>
-                    <!-- /.col-sm-4-->
-                    <div class="col-md-4">
-                        <h3><i class="fa fa-phone"></i> Call center</h3>
-                        <p class="text-muted">Standard rates apply for the calls</p>
-                        <p><strong>+27 61 0711289</strong></p>
-                    </div>
-                    <!-- /.col-sm-4-->
-                    <div class="col-md-4">
-                        <h3><i class="fa fa-envelope"></i> Electronic support</h3>
-                        <p class="text-muted">Please feel free to write an email to us.</p>
-                        <p><strong><a href="mailto:">perfectdecoration@gmail.com</a></strong></p>
-                    </div>
-                    <!-- /.col-sm-4-->
-                </div>
-                <!-- /.row-->
-                <hr>
-                <div>
-                    <h3 class="text-center">Or, get in touch with us</h3>
-                    <p class="text-center text-muted">Complete the form below and send us a message</p>
-                </div>
-                <hr>
-                <h2>Contact form</h2>
-                <form validate="true" action="contact.php" method="post" id="contact">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="firstName">Firstname </label>
-                                <input id="firstName" type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="lastName">Lastname </label>
-                                <input id="lastName" type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="email">Email </label>
-                                <input id="email" type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="subject">Subject </label>
-                                <input id="subject" type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="message">Message </label>
-                                <textarea id="message" class="form-control" required></textarea>
-                            </div>
-                        </div>
-                        <div class="col-md-12 text-center">
-                            <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Send message</button>
-                        </div>
-                    </div>
-                    <!-- /.row-->
-                </form>
-            </div>
-
-            <!-- /.col-md-9-->
-        </div>
-    </div>
-    </div>
-    <?php
-    include("includes/footer.php");
-    ?>
-
-
-
-
-    <script>
-        $(document).ready(function() {
-            $("#contact").validate();
-        });
-    </script>
-</body>
-
-</html>

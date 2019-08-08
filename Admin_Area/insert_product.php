@@ -21,11 +21,20 @@ include("includes/db.php");
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!-- Google fonts - Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 
 </head>
 
 <body>
     <div class="row">
+        <div class="alert alert-success hidden" id="success-alert">
+            <button type="button" class="close">x</button>
+            <span class="glyphicon glyphicon-ok"></span> The product has been succesfull added
+        </div>
         <div class="col-lg-12">
             <ol class="breadcrumb">
                 <li class="active">
@@ -110,12 +119,12 @@ include("includes/db.php");
 
                                     <div class="col-md-3">
 
-                                        <label class="control-label">Produc Category</label>
+                                        <label class="control-label"> Category</label>
 
                                     </div>
                                     <div class="col-md-6">
 
-                                        <select name="product_cat" class="form-control">
+                                        <select name="cat" class="form-control">
                                             <option>Select a Category </option>
                                             <?php
 
@@ -169,7 +178,7 @@ include("includes/db.php");
                                     </div>
                                     <div class="col-md-6">
 
-                                        <input name="product_img2" type="file" class="form-control " required>
+                                        <input name="product_img2" type="file" class="form-control ">
 
                                     </div>
                                 </div>
@@ -186,7 +195,7 @@ include("includes/db.php");
                                     </div>
                                     <div class="col-md-6">
 
-                                        <input name="product_img3" type="file" class="form-control " required>
+                                        <input name="product_img3" type="file" class="form-control ">
 
                                     </div>
                                 </div>
@@ -254,7 +263,7 @@ include("includes/db.php");
                                     </div>
                                     <div class="col-md-6">
 
-                                       <input name="submit" value="Insert Products" type="submit" class="btn btn-primary form-control">
+                                        <input  id="btn" name="submit" value="Insert Products" type="submit" class="btn btn-primary form-control">
 
                                     </div>
                                 </div>
@@ -279,3 +288,42 @@ include("includes/db.php");
 </body>
 
 </html>
+
+<!-- use to insert products ti the database from the user -->
+<?php
+if (isset($_POST['submit'])) {
+
+    $product_title = $_POST['product_title'];
+    $product_cat = $_POST['product_cat'];
+    $cat = $_POST['cat'];
+    $product_price = $_POST['product_price'];
+    $product_keywords = $_POST['product_keywords'];
+    $product_desc = $_POST['product_desc'];
+
+    $product_img1 = $_FILES['product_img1']['name'];
+    $product_img2 = $_FILES['product_img2']['name'];
+    $product_img3 = $_FILES['product_img3']['name'];
+
+    $temp_name1 = $_FILES['product_img1']['tmp_name'];
+    $temp_name2 = $_FILES['product_img2']['tmp_name'];
+    $temp_name3 = $_FILES['product_img3']['tmp_name'];
+
+    move_uploaded_file($temp_name1, "product_images/$product_img1");
+    move_uploaded_file($temp_name2, "product_images/$product_img2");
+    move_uploaded_file($temp_name3, "product_images/$product_img3");
+
+    $insert_product = "insert into products (p_cat_id,cat_id,date,product_title,product_img1,product_img2,product_img3,product_price,product_keywords,product_desc) values
+     ('$product_cat','$cat',NOW(),'$product_title','$product_img1','$product_img2','$product_img3','$product_price','$product_keywords','$product_desc')";
+
+    $run_product = mysqli_query($con, $insert_product);
+
+    if ($run_product) {
+
+        echo "
+        <script>alert('Product has been inserted sucessfully')</script>
+                
+            ";
+        echo "<script>window.open('insert_product.php','_self')</script>";
+    }
+}
+?>
