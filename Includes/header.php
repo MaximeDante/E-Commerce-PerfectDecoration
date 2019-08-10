@@ -94,9 +94,21 @@ if (isset($_GET['pro_id'])) {
                     <div class="col-lg-6 text-center text-lg-right">
                         <ul class="menu list-inline mb-0">
                             <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
-                            <li class="list-inline-item"><a href="register.html">Register</a></li>
-                            <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-                            <li class="list-inline-item"><a href="contact.html">Abous US</a></li>
+                            <li class="list-inline-item"><a href="register.php">Register</a></li>
+                            <li class="list-inline-item"><a></a>
+                                <?php
+
+                                if (!isset($_SESSION['customer_email'])) {
+
+                                    echo "<a href='register.php'>Account</a>";
+                                } else {
+
+                                    echo "<a href='customer/my_account.php?my_orders'>My Account</a>";
+                                }
+
+                                ?>
+                            </li>
+                            <li class="list-inline-item"><a href="about_us.php">Abous US</a></li>
 
                         </ul>
                     </div>
@@ -138,11 +150,11 @@ if (isset($_GET['pro_id'])) {
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" data-toggle="collapse" data-target="#navigation" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
-                    <button type="button" data-toggle="collapse" data-target="#search" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></button><a href="basket.html" class="btn btn-outline-secondary navbar-toggler"><i class="fa fa-shopping-cart"></i></a>
+                    <button type="button" data-toggle="collapse" data-target="#search" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></button><a href="checkout.php" class="btn btn-outline-secondary navbar-toggler"><i class="fa fa-shopping-cart"></i></a>
                 </div>
                 <div id="navigation" class="collapse navbar-collapse">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a href="#" class=" nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="index.php" class=" nav-link active">Home</a></li>
                         <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">Weddings<b class="caret"></b></a>
                             <ul class="dropdown-menu megamenu">
                                 <li>
@@ -150,21 +162,21 @@ if (isset($_GET['pro_id'])) {
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Men</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Woman</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Accessories</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
@@ -180,21 +192,21 @@ if (isset($_GET['pro_id'])) {
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Men</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Women</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Kids</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
 
@@ -214,28 +226,28 @@ if (isset($_GET['pro_id'])) {
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Party Decor</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="index.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Tableware</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="register.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Glasware</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="basket.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Balloons</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="blog.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
@@ -266,51 +278,51 @@ if (isset($_GET['pro_id'])) {
         </div> <!-- search ends -->
     </header> <!-- Header ends -->
 
-    
+
     <?php
 
-if (isset($_POST['login'])) {
+    if (isset($_POST['login'])) {
 
-    $customer_email = $_POST['c_email'];
+        $customer_email = $_POST['c_email'];
 
-    $customer_pass = $_POST['c_pass'];
+        $customer_pass = $_POST['c_pass'];
 
-    $select_customer = "select * from customers where customer_email='$customer_email' AND customer_pass='$customer_pass'";
+        $select_customer = "select * from customers where customer_email='$customer_email' AND customer_pass='$customer_pass'";
 
-    $run_customer = mysqli_query($con, $select_customer);
+        $run_customer = mysqli_query($con, $select_customer);
 
-    $get_ip = getRealIpUser();
+        $get_ip = getRealIpUser();
 
-    $check_customer = mysqli_num_rows($run_customer);
+        $check_customer = mysqli_num_rows($run_customer);
 
-    $select_cart = "select * from cart where ip_add='$get_ip'";
+        $select_cart = "select * from cart where ip_add='$get_ip'";
 
-    $run_cart = mysqli_query($con, $select_cart);
+        $run_cart = mysqli_query($con, $select_cart);
 
-    $check_cart = mysqli_num_rows($run_cart);
+        $check_cart = mysqli_num_rows($run_cart);
 
-    if ($check_customer == 0) {
+        if ($check_customer == 0) {
 
-        echo "<script>alert('Your email or password is wrong')</script>";
+            echo "<script>alert('Your email or password is wrong')</script>";
 
-        exit();
+            exit();
+        }
+
+        if ($check_customer == 1 and $check_cart == 0) {
+
+            $_SESSION['customer_email'] = $customer_email;
+
+            echo "<script>alert('You are Logged in')</script>";
+
+            echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
+        } else {
+
+            $_SESSION['customer_email'] = $customer_email;
+
+            echo "<script>alert('You are Logged in')</script>";
+
+            echo "<script>window.open('checkout.php','_self')</script>";
+        }
     }
 
-    if ($check_customer == 1 and $check_cart == 0) {
-
-        $_SESSION['customer_email'] = $customer_email;
-
-        echo "<script>alert('You are Logged in')</script>";
-
-        echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
-    } else {
-
-        $_SESSION['customer_email'] = $customer_email;
-
-        echo "<script>alert('You are Logged in')</script>";
-
-        echo "<script>window.open('checkout.php','_self')</script>";
-    }
-}
-
-?>
+    ?>

@@ -91,26 +91,36 @@ if (isset($_GET['pro_id'])) {
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" class="btn btn-success btn-sm">
-                    <?php 
-                   
-                   if(!isset($_SESSION['customer_email'])){
-                       
-                       echo "Welcome: Guest";
-                       
-                   }else{
-                       
-                       echo "Welcome: " . $_SESSION['customer_email'] . "";
-                       
-                   }
-                   
-                   ?>
-                    </a><a href="checkout.php" class="ml-1"> <?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?></a></div>
+                            <?php
+
+                            if (!isset($_SESSION['customer_email'])) {
+
+                                echo "Welcome: Guest";
+                            } else {
+
+                                echo "Welcome: " . $_SESSION['customer_email'] . "";
+                            }
+
+                            ?>
+                        </a><a href="checkout.php" class="ml-1"> <?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?></a></div>
                     <div class="col-lg-6 text-center text-lg-right">
                         <ul class="menu list-inline mb-0">
                             <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
-                            <li class="list-inline-item"><a href="register.html">Register</a></li>
-                            <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-                            <li class="list-inline-item"><a href="contact.html">Abous US</a></li>
+                            <li class="list-inline-item"><a href="../register.php">Register</a></li>
+                            <li class="list-inline-item"><a href="my_account.php"></a>
+                                <?php
+
+                                if (!isset($_SESSION['customer_email'])) {
+
+                                    echo "<a href='register.php'>Account</a>";
+                                } else {
+
+                                    echo "<a href='my_account.php?my_orders'>My Account</a>";
+                                }
+
+                                ?>
+                            </li>
+                            <li class="list-inline-item"><a href="../about_us.php">Abous US</a></li>
 
                         </ul>
                     </div>
@@ -147,7 +157,7 @@ if (isset($_GET['pro_id'])) {
         </div> <!-- top bar ends -->
         <nav class="navbar navbar-expand-lg ">
             <div class="container">
-                <a class="navbar-brand home" href="index.php">
+                <a class="navbar-brand home" href="../index.php">
                     <img src="Images/perfect.jpg">
                 </a>
                 <div class="navbar-buttons">
@@ -156,7 +166,7 @@ if (isset($_GET['pro_id'])) {
                 </div>
                 <div id="navigation" class="collapse navbar-collapse">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="../index.php" class="nav-link active">Home</a></li>
                         <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">Weddings<b class="caret"></b></a>
                             <ul class="dropdown-menu megamenu">
                                 <li>
@@ -164,21 +174,21 @@ if (isset($_GET['pro_id'])) {
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Men</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="../shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Woman</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="../shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Accessories</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="../shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
@@ -194,21 +204,21 @@ if (isset($_GET['pro_id'])) {
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Men</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="../shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Women</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="../shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Kids</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="../shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
 
@@ -228,28 +238,28 @@ if (isset($_GET['pro_id'])) {
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Party Decor</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="index.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="../shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Tableware</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="register.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="../shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Glasware</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="basket.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="../shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Balloons</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="blog.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="../shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>

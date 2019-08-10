@@ -7,15 +7,15 @@
             <div class="col-lg-3 col-md-6">
                 <h4 class="mb-3">Pages</h4>
                 <ul class="list-unstyled">
-                    <li><a href="text.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="text.html"></a></li>
-                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="contact.php">Contact us</a></li>
                 </ul>
                 <hr>
                 <h4 class="mb-3">User section</h4>
                 <ul class="list-unstyled">
                     <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
-                    <li><a href="register.html">Register</a></li>
+                    <li><a href="register.php">Register</a></li>
                 </ul>
             </div>
             <!-- /.col-lg-3-->
@@ -23,22 +23,22 @@
                 <h4 class="mb-3">Top Products categories</h4>
                 <h5>Birthday</h5>
                 <ul class="list-unstyled">
-                    <li><a href="category.html">Men</a></li>
-                    <li><a href="category.html">Women</a></li>
-                    <li><a href="category.html">Category</a></li>
+                    <li><a href="shop.php">Men</a></li>
+                    <li><a href="shop.php">Women</a></li>
+                    <li><a href="shop.php">Category</a></li>
                 </ul>
                 <h5>Party Supplies</h5>
                 <ul class="list-unstyled">
-                    <li><a href="category.html">Party Decor</a></li>
-                    <li><a href="category.html">Tableware</a></li>
-                    <li><a href="category.html">Glassware</a></li>
-                    <li><a href="category.html">Balloons</a></li>
+                    <li><a href="shop.php">Party Decor</a></li>
+                    <li><a href="shop.php">Tableware</a></li>
+                    <li><a href="shop.php">Glassware</a></li>
+                    <li><a href="shop.php">Balloons</a></li>
                 </ul>
             </div>
             <!-- /.col-lg-3-->
             <div class="col-lg-3 col-md-6">
                 <h4 class="mb-3">Where to find us</h4>
-                <p><strong>23 Station Road</strong><br>12 Elvis Court<br>Kenilworth<br>Capr Town<br><strong>South Africa</strong></p><a href="contact.html">Go to contact page</a>
+                <p><strong>23 Station Road</strong><br>12 Elvis Court<br>Kenilworth<br>Capr Town<br><strong>South Africa</strong></p><a href="contact.php">Go to contact page</a>
                 <hr class="d-block d-md-none">
             </div>
             <!-- /.col-lg-3-->

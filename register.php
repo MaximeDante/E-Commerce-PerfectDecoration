@@ -112,9 +112,21 @@ if (isset($_GET['pro_id'])) {
                     <div class="col-lg-6 text-center text-lg-right">
                         <ul class="menu list-inline mb-0">
                             <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
-                            <li class="list-inline-item"><a href="register.html">Register</a></li>
-                            <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-                            <li class="list-inline-item"><a href="contact.html">Abous US</a></li>
+                            <li class="list-inline-item"><a href="register.php">Register</a></li>
+                            <li class="list-inline-item"><a></a>
+                                <?php
+
+                                if (!isset($_SESSION['customer_email'])) {
+
+                                    echo "<a href='register.php'>Account</a>";
+                                } else {
+
+                                    echo "<a href='customer/my_account.php?my_orders'>My Account</a>";
+                                }
+
+                                ?>
+                            </li>
+                            <li class="list-inline-item"><a href="about_us.php">Abous US</a></li>
 
                         </ul>
                     </div>
@@ -160,7 +172,7 @@ if (isset($_GET['pro_id'])) {
                 </div>
                 <div id="navigation" class="collapse navbar-collapse">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="index.php" class="nav-link active">Home</a></li>
                         <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">Weddings<b class="caret"></b></a>
                             <ul class="dropdown-menu megamenu">
                                 <li>
@@ -168,21 +180,21 @@ if (isset($_GET['pro_id'])) {
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Men</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Woman</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Accessories</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
@@ -198,21 +210,21 @@ if (isset($_GET['pro_id'])) {
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Men</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Women</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Kids</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
 
@@ -232,28 +244,28 @@ if (isset($_GET['pro_id'])) {
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Party Decor</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="index.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Tableware</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="register.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Glasware</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="basket.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Balloons</h5>
                                             <ul class="list-unstyled mb-3">
-                                                <li class="nav-item"><a href="blog.html" class="nav-link">Decor</a></li>
+                                                <li class="nav-item"><a href="shop.php" class="nav-link">Decor</a></li>
 
                                             </ul>
                                         </div>
@@ -350,7 +362,7 @@ if (isset($_GET['pro_id'])) {
                                 <button type="submit" name="login" class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
                             </div>
                         </form>
-                       
+
                     </div>
                 </div>
             </div>
@@ -410,7 +422,7 @@ if (isset($_POST['register'])) {
 }
 
 ?>
- <?php
+<?php
 
 if (isset($_POST['login'])) {
 
