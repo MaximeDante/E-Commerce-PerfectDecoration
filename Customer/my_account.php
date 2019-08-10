@@ -112,7 +112,7 @@ if (isset($_GET['pro_id'])) {
 
                                 if (!isset($_SESSION['customer_email'])) {
 
-                                    echo "<a href='register.php'>Account</a>";
+                                    echo "<a href='my_account.php?my_orders'>My Account</a>";
                                 } else {
 
                                     echo "<a href='my_account.php?my_orders'>My Account</a>";
@@ -271,7 +271,7 @@ if (isset($_GET['pro_id'])) {
                     <div class="navbar-buttons d-flex justify-content-end">
                         <!-- /.nav-collapse-->
                         <div id="search-not-mobile" class="navbar-collapse collapse"></div><a data-toggle="collapse" href="#search" class="btn navbar-btn btn-primary d-none d-lg-inline-block"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></a>
-                        <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block"><a href="basket.html" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span> <?php items(); ?> items in your cart</span></a></div>
+                        <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block"><a href="../cart.php" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span> <?php items(); ?> items in your cart</span></a></div>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("includes/db.php");
 include("Functions/functions.php");
 ?>
@@ -104,7 +105,19 @@ if (isset($_GET['pro_id'])) {
         <div id="top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" class="btn btn-success btn-sm">Welcome</a><a href="#" class="ml-1"> <?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?></a></div>
+                    <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" class="btn btn-success btn-sm">
+                            <?php
+
+                            if (!isset($_SESSION['customer_email'])) {
+
+                                echo "Welcome: Guest";
+                            } else {
+
+                                echo "Welcome: " . $_SESSION['customer_email'] . "";
+                            }
+
+                            ?>
+                        </a><a href="#" class="ml-1"> <?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?></a></div>
                     <div class="col-lg-6 text-center text-lg-right">
                         <ul class="menu list-inline mb-0">
                             <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
@@ -273,7 +286,7 @@ if (isset($_GET['pro_id'])) {
                     <div class="navbar-buttons d-flex justify-content-end">
                         <!-- /.nav-collapse-->
                         <div id="search-not-mobile" class="navbar-collapse collapse"></div><a data-toggle="collapse" href="#search" class="btn navbar-btn btn-primary d-none d-lg-inline-block"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></a>
-                        <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block"><a href="basket.html" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span><?php items(); ?> items in your cart</span></a></div>
+                        <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block"><a href="cart.php" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span><?php items(); ?> items in your cart</span></a></div>
                     </div>
                 </div>
             </div>
