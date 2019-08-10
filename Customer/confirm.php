@@ -36,7 +36,21 @@
             <div id="top">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" class="btn btn-success btn-sm">Welcome</a><a href="#" class="ml-1">4 Items In Your Cart | Total Price: $300</a></div>
+                        <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" class="btn btn-success btn-sm">
+                        <?php 
+                   
+                   if(!isset($_SESSION['customer_email'])){
+                       
+                       echo "Welcome: Guest";
+                       
+                   }else{
+                       
+                       echo "Welcome: " . $_SESSION['customer_email'] . "";
+                       
+                   }
+                   
+                   ?>
+                        </a><a href="#" class="ml-1">4 Items In Your Cart | Total Price: $300</a></div>
                         <div class="col-lg-6 text-center text-lg-right">
                             <ul class="menu list-inline mb-0">
                                 <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>

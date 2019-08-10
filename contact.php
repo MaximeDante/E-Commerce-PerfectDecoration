@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("includes/db.php");
 include("Functions/functions.php");
 ?>
@@ -87,7 +88,7 @@ if (isset($_GET['pro_id'])) {
 </head>
 
 <body>
-<header class="header mb-5">
+    <header class="header mb-5">
         <!--
       *** TOPBAR ***
       _________________________________________________________
@@ -95,7 +96,19 @@ if (isset($_GET['pro_id'])) {
         <div id="top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" class="btn btn-success btn-sm">Welcome</a><a href="checkout" class="ml-1"><?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?></a></div>
+                    <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" class="btn btn-success btn-sm">
+                            <?php
+
+                            if (!isset($_SESSION['customer_email'])) {
+
+                                echo "Welcome: Guest";
+                            } else {
+
+                                echo "Welcome: " . $_SESSION['customer_email'] . "";
+                            }
+
+                            ?>
+                        </a><a href="checkout" class="ml-1"><?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?></a></div>
                     <div class="col-lg-6 text-center text-lg-right">
                         <ul class="menu list-inline mb-0">
                             <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
@@ -115,15 +128,15 @@ if (isset($_GET['pro_id'])) {
                             <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                         </div>
                         <div class="modal-body">
-                            <form action="customer-orders.html" method="post">
+                            <form action="contact.php" method="post">
                                 <div class="form-group">
-                                    <input id="email-modal" type="text" placeholder="email" class="form-control">
+                                    <input name="c_email" id="email-modal" type="text" placeholder="email" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <input id="password-modal" type="password" placeholder="password" class="form-control">
+                                    <input name="c_pass" id="password-modal" type="password" placeholder="password" class="form-control">
                                 </div>
                                 <p class="text-center">
-                                    <button class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
+                                    <button name="login" class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
                                 </p>
                             </form>
                             <p class="text-center text-muted">Not registered yet?</p>
@@ -138,8 +151,8 @@ if (isset($_GET['pro_id'])) {
         </div> <!-- top bar ends -->
         <nav class="navbar navbar-expand-lg ">
             <div class="container">
-                <a class="navbar-brand home" href="index.php" >
-                    <img src="Images/Logo.jpg" >
+                <a class="navbar-brand home" href="index.php">
+                    <img src="Images/Logo.jpg">
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" data-toggle="collapse" data-target="#navigation" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
@@ -156,24 +169,24 @@ if (isset($_GET['pro_id'])) {
                                             <h5>Men</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Woman</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Accessories</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
-                                       
+
                                     </div>
                                 </li>
                             </ul>
@@ -186,23 +199,23 @@ if (isset($_GET['pro_id'])) {
                                             <h5>Men</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                               
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Women</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Kids</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="category.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
-                                            
+
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <div class="banner"><a href="#"><img src="img/banner.jpg" alt="" class="img img-fluid"></a></div>
@@ -220,28 +233,28 @@ if (isset($_GET['pro_id'])) {
                                             <h5>Party Decor</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="index.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Tableware</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="register.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Glasware</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="basket.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-3">
                                             <h5>Balloons</h5>
                                             <ul class="list-unstyled mb-3">
                                                 <li class="nav-item"><a href="blog.html" class="nav-link">Decor</a></li>
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -319,32 +332,32 @@ if (isset($_GET['pro_id'])) {
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="firstName">Firstname </label>
-                                <input id="firstName" type="text" class="form-control" required>
+                                <label for="firstName">Name </label>
+                                <input id="name" type="text" class="form-control" name="name" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="lastName">Lastname </label>
-                                <input id="lastName" type="text" class="form-control" required>
+                                <label for="lastName">Surname </label>
+                                <input id="surname" type="text" class="form-control" name="surname" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="email">Email </label>
-                                <input id="email" type="text" class="form-control" required>
+                                <input id="email" type="text" class="form-control" name="email" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="subject">Subject </label>
-                                <input id="subject" type="text" class="form-control" required>
+                                <input id="subject" type="text" class="form-control" name="subject" required>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="message">Message </label>
-                                <textarea id="message" class="form-control" required></textarea>
+                                <textarea id="message" class="form-control" name="message" required></textarea>
                             </div>
                         </div>
                         <div class="col-md-12 text-center">
@@ -353,6 +366,42 @@ if (isset($_GET['pro_id'])) {
                     </div>
                     <!-- /.row-->
                 </form>
+                <?php
+
+                if (isset($_POST['submit'])) {
+
+                    /// Admin receives message with this ///
+
+                    $sender_name = $_POST['name'];
+
+                    $sender_surname = $_POST['surname'];
+
+                    $sender_email = $_POST['email'];
+
+                    $sender_subject = $_POST['subject'];
+
+                    $sender_message = $_POST['message'];
+
+                    $receiver_email = "maximekanyinda@gmail.com";
+
+                    mail($receiver_email, $sender_name, $sender_subject, $sender_message, $sender_email);
+
+                    /// Auto reply to sender with this ///
+
+                    $email = $_POST['email'];
+
+                    $subject = "Welcome to our website";
+
+                    $msg = "Thanks for sending us message. This is auto generated reply, our customer service will get back to you as soon as possible";
+
+                    $from = "maximekanyinda@gmail.com";
+
+                    mail($email, $subject, $msg, $from);
+
+                    echo "<h2 class='text-center'> Your message has sent sucessfully </h2>";
+                }
+
+                ?>
             </div>
 
             <!-- /.col-md-9-->
@@ -374,3 +423,51 @@ if (isset($_GET['pro_id'])) {
 </body>
 
 </html>
+
+<?php
+
+if (isset($_POST['login'])) {
+
+    $customer_email = $_POST['c_email'];
+
+    $customer_pass = $_POST['c_pass'];
+
+    $select_customer = "select * from customers where customer_email='$customer_email' AND customer_pass='$customer_pass'";
+
+    $run_customer = mysqli_query($con, $select_customer);
+
+    $get_ip = getRealIpUser();
+
+    $check_customer = mysqli_num_rows($run_customer);
+
+    $select_cart = "select * from cart where ip_add='$get_ip'";
+
+    $run_cart = mysqli_query($con, $select_cart);
+
+    $check_cart = mysqli_num_rows($run_cart);
+
+    if ($check_customer == 0) {
+
+        echo "<script>alert('Your email or password is wrong')</script>";
+
+        exit();
+    }
+
+    if ($check_customer == 1 and $check_cart == 0) {
+
+        $_SESSION['customer_email'] = $customer_email;
+
+        echo "<script>alert('You are Logged in')</script>";
+
+        echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
+    } else {
+
+        $_SESSION['customer_email'] = $customer_email;
+
+        echo "<script>alert('You are Logged in')</script>";
+
+        echo "<script>window.open('checkout.php','_self')</script>";
+    }
+}
+
+?>

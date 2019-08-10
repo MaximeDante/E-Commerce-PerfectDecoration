@@ -124,15 +124,15 @@ if (isset($_GET['pro_id'])) {
                             <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                         </div>
                         <div class="modal-body">
-                            <form action="customer-orders.html" method="post">
+                            <form action="cart.php" method="post">
                                 <div class="form-group">
-                                    <input id="email-modal" type="text" placeholder="email" class="form-control">
+                                    <input name="c_email" id="email-modal" type="text" placeholder="email" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <input id="password-modal" type="password" placeholder="password" class="form-control">
+                                    <input name="c_pass" id="password-modal" type="password" placeholder="password" class="form-control">
                                 </div>
                                 <p class="text-center">
-                                    <button class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
+                                    <button name="login"  class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
                                 </p>
                             </form>
                             <p class="text-center text-muted">Not registered yet?</p>
@@ -301,7 +301,18 @@ if (isset($_GET['pro_id'])) {
                     <div class="box">
                         <form method="post" action="cart.php" enctype="multipart/form-data">
                             <h1>Shopping cart</h1>
-                            <p class="text-muted">You currently have 1 item(s) in your cart.</p>
+                            <?php
+
+                            $ip_add = getRealIpUser();
+
+                            $select_cart = "select * from cart where ip_add='$ip_add'";
+
+                            $run_cart = mysqli_query($con, $select_cart);
+
+                            $count = mysqli_num_rows($run_cart);
+
+                            ?>
+                            <p class="text-muted">You currently have <?php echo $count; ?> item(s) in your cart.</p>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -314,64 +325,70 @@ if (isset($_GET['pro_id'])) {
                                             <th colspan="2">Sub Total</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><a href="#"><img class="img-fluid" src="Images/p1.jpg" alt="product1"></a></td>
-                                            <td><a href="#">Assorted HBD Balloons</a></td>
-                                            <td>
-                                                2
-                                            </td>
-                                            <td>R50</td>
-                                            <td>Large</td>
-                                            <td>
-                                                <input type="checkbox" name="remove[]">
-                                            </td>
-                                            <td>
-                                                R100
-                                            </td>
-                                        </tr>
 
-                                    </tbody>
-                                    <tbody>
-                                        <tr>
-                                            <td><a href="#"><img class="img-fluid" src="Images/p1.jpg" alt="product1"></a></td>
-                                            <td><a href="#">Assorted HBD Balloons</a></td>
-                                            <td>
-                                                2
-                                            </td>
-                                            <td>R50</td>
-                                            <td>Large</td>
-                                            <td>
-                                                <input type="checkbox" name="remove[]">
-                                            </td>
-                                            <td>
-                                                R100
-                                            </td>
-                                        </tr>
 
-                                    </tbody>
                                     <tbody>
-                                        <tr>
-                                            <td><a href="#"><img class="img-fluid" src="Images/p1.jpg" alt="product1"></a></td>
-                                            <td><a href="#">Assorted HBD Balloons</a></td>
-                                            <td>
-                                                2
-                                            </td>
-                                            <td>R50</td>
-                                            <td>Large</td>
-                                            <td>
-                                                <input type="checkbox" name="remove[]">
-                                            </td>
-                                            <td>
-                                                R100
-                                            </td>
-                                        </tr>
+                                        <?php
+
+                                        $total = 0;
+
+                                        while ($row_cart = mysqli_fetch_array($run_cart)) {
+
+                                            $pro_id = $row_cart['P_id'];
+
+                                            $pro_size = $row_cart['size'];
+
+                                            $pro_qty = $row_cart['qty'];
+
+                                            $get_products = "select * from products where product_id='$pro_id'";
+
+                                            $run_products = mysqli_query($con, $get_products);
+
+                                            while ($row_products = mysqli_fetch_array($run_products)) {
+
+                                                $product_title = $row_products['product_title'];
+
+                                                $product_img1 = $row_products['product_img1'];
+
+                                                $only_price = $row_products['product_price'];
+
+                                                $sub_total = $row_products['product_price'] * $pro_qty;
+
+                                                $total += $sub_total;
+
+                                                ?>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img class="img-fluid" src="Admin_Area/product_images/<?php echo $product_img1; ?>" alt="product1"></a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="details.php?pro_id=<?php echo $pro_id; ?>"> <?php echo $product_title; ?> </a>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $pro_qty; ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $only_price; ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $pro_size; ?>
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" name="remove[]" value="<?php echo $pro_id; ?>">
+                                                    </td>
+                                                    <td>
+                                                        $<?php echo $sub_total; ?>
+                                                    </td>
+                                                </tr>
+
+                                            <?php }
+                                        } ?>
 
                                     </tbody>
                                     <tfoot>
                                         <tr>
                                             <th colspan="5">Total</th>
-                                            <th colspan="2">$446.00</th>
+                                            <th colspan="2">R<?php echo $total; ?></th>
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -390,7 +407,34 @@ if (isset($_GET['pro_id'])) {
                             </div>
                         </form>
 
-                    </div>
+                    </div> <!-- box ends -->
+                    <?php
+
+                    function update_cart()
+                    {
+
+                        global $con;
+
+                        if (isset($_POST['update'])) {
+
+                            foreach ($_POST['remove'] as $remove_id) {
+
+                                $delete_product = "delete from cart where p_id='$remove_id'";
+
+                                $run_delete = mysqli_query($con, $delete_product);
+
+                                if ($run_delete) {
+
+                                    echo "<script>window.open('cart.php','_self')</script>";
+                                }
+                            }
+                        }
+                    }
+
+                    echo @$up_cart = update_cart();
+
+                    ?>
+
                     <div class="container">
                         <div class="row same-height-row">
                             <div class="col-md-12">
@@ -399,82 +443,49 @@ if (isset($_GET['pro_id'])) {
                                 </div>
                             </div>
 
-                            <div class="col-md-3 col-sm-6">
-                                <div class="product same-height">
-                                    <div>
-                                        <a href="details.php">
-                                            <img class="img-fluid" src="Images/p1.jpg" alt="Product 6">
-                                        </a>
-                                    </div>
+                            <?php
 
-                                    <div class="text">
-                                        <!-- text Begin -->
-                                        <h3><a href="details.php">Assorted HBD Balloons</a></h3>
+                            $get_products = "select * from products order by rand() LIMIT 0,4";
 
-                                        <p class="price">$40</p>
+                            $run_products = mysqli_query($con, $get_products);
 
-                                    </div><!-- text Finish -->
-                                </div>
-                                <!-- /.product-->
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="product same-height">
-                                    <div>
-                                        <a href="details.php">
-                                            <img class="img-fluid" src="Images/p1.jpg" alt="Product 6">
-                                        </a>
-                                    </div>
+                            while ($row_products = mysqli_fetch_array($run_products)) {
 
-                                    <div class="text">
-                                        <!-- text Begin -->
-                                        <h3><a href="details.php">Assorted HBD Balloons</a></h3>
+                                $pro_id = $row_products['product_id'];
 
-                                        <p class="price">$40</p>
+                                $pro_title = $row_products['product_title'];
 
-                                    </div><!-- text Finish -->
-                                </div>
-                                <!-- /.product-->
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="product same-height">
-                                    <div>
-                                        <a href="details.php">
-                                            <img class="img-fluid" src="Images/p1.jpg" alt="Product 6">
-                                        </a>
-                                    </div>
+                                $pro_img1 = $row_products['product_img1'];
 
-                                    <div class="text">
-                                        <!-- text Begin -->
-                                        <h3><a href="details.php">Assorted HBD Balloons</a></h3>
+                                $pro_price = $row_products['product_price'];
 
-                                        <p class="price">$40</p>
-
-                                    </div><!-- text Finish -->
-                                </div>
-                                <!-- /.product-->
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="product same-height">
-                                    <div>
-                                        <a href="details.php">
-                                            <img class="img-fluid" src="Images/p1.jpg" alt="Product 6">
-                                        </a>
-                                    </div>
-
-                                    <div class="text">
-                                        <!-- text Begin -->
-                                        <h3><a href="details.php">Assorted HBD Balloons</a></h3>
-
-                                        <p class="price">$40</p>
-
-                                    </div><!-- text Finish -->
-                                </div>
-                                <!-- /.product-->
-                            </div>
-
-
-
-
+                                echo "
+                      
+                       <div class='col-md-3 col-sm-6'>
+                       
+                           <div class='product same-height'>
+                           
+                               <a href='details.php?pro_id=$pro_id'>
+                               
+                                   <img class='img-fluid' src='Admin_Area/product_images/$pro_img1'>
+                               
+                               </a>
+                               
+                               <div class='text'>
+                               
+                                   <h3> <a href='details.php?pro_id=$pro_id'> $pro_title </a> </h3>
+                                   
+                                   <p class='price'> $ $pro_price </p>
+                               
+                               </div>
+                           
+                           </div>
+                       
+                       </div>
+                      
+                            ";
+                            }
+                            ?>
 
                         </div>
                     </div>
@@ -483,7 +494,7 @@ if (isset($_GET['pro_id'])) {
                 <div class="col-lg-3">
                     <div id="order-summary" class="card">
                         <div class="card-header">
-                            <h3>Order summary</h3>
+                            <h3>Your Order</h3>
                             <p class="text-muted">Shipping and additional costs are calculated based on the values you have entered.</p>
                         </div>
 
@@ -492,23 +503,33 @@ if (isset($_GET['pro_id'])) {
                                 <tbody>
                                     <tr>
                                         <td>Order subtotal</td>
-                                        <th>$446.00</th>
+                                        <th>R<?php echo $total; ?></th>
                                     </tr>
                                     <tr>
                                         <td>Shipping and handling</td>
-                                        <th>$10.00</th>
+                                        <th>R0</th>
                                     </tr>
-                                    <tr>
-                                        <td>Tax</td>
-                                        <th>$0.00</th>
-                                    </tr>
+
                                     <tr class="total">
                                         <td>Total</td>
-                                        <th>$456.00</th>
+                                        <th>R<?php echo $total; ?></th>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-header">
+                            <h4 class="mb-0">Coupon code</h4>
+                        </div>
+                        <p class="text-muted">If you have a coupon code, please enter it in the box below.</p>
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control"><span class="input-group-append">
+                                    <button type="button" class="btn btn-primary"><i class="fa fa-gift"></i></button></span>
+                            </div>
+                            <!-- /input-group-->
+                        </form>
                     </div>
 
                 </div>
@@ -524,3 +545,51 @@ if (isset($_GET['pro_id'])) {
 </body>
 
 </html>
+
+<?php
+
+if (isset($_POST['login'])) {
+
+    $customer_email = $_POST['c_email'];
+
+    $customer_pass = $_POST['c_pass'];
+
+    $select_customer = "select * from customers where customer_email='$customer_email' AND customer_pass='$customer_pass'";
+
+    $run_customer = mysqli_query($con, $select_customer);
+
+    $get_ip = getRealIpUser();
+
+    $check_customer = mysqli_num_rows($run_customer);
+
+    $select_cart = "select * from cart where ip_add='$get_ip'";
+
+    $run_cart = mysqli_query($con, $select_cart);
+
+    $check_cart = mysqli_num_rows($run_cart);
+
+    if ($check_customer == 0) {
+
+        echo "<script>alert('Your email or password is wrong')</script>";
+
+        exit();
+    }
+
+    if ($check_customer == 1 and $check_cart == 0) {
+
+        $_SESSION['customer_email'] = $customer_email;
+
+        echo "<script>alert('You are Logged in')</script>";
+
+        echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
+    } else {
+
+        $_SESSION['customer_email'] = $customer_email;
+
+        echo "<script>alert('You are Logged in')</script>";
+
+        echo "<script>window.open('checkout.php','_self')</script>";
+    }
+}
+
+?>

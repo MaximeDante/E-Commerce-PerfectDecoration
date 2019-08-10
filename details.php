@@ -110,7 +110,7 @@ include("includes/header.php");
                                         <select name="product_size" class="form-control">
                                             <!-- form-control Begin -->
 
-                                            <option >Select a Size</option>
+                                            <option disabled selected>Select a Size</option>
                                             <option>Small</option>
                                             <option>Medium</option>
                                             <option>Large</option>

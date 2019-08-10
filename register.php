@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("includes/db.php");
 include("Functions/functions.php");
 ?>
@@ -95,7 +96,19 @@ if (isset($_GET['pro_id'])) {
         <div id="top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" class="btn btn-success btn-sm">Welcome</a><a href="checkout.php" class="ml-1"><?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?></a></div>
+                    <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" class="btn btn-success btn-sm">
+                            <?php
+
+                            if (!isset($_SESSION['customer_email'])) {
+
+                                echo "Welcome: Guest";
+                            } else {
+
+                                echo "Welcome: " . $_SESSION['customer_email'] . "";
+                            }
+
+                            ?>
+                        </a><a href="checkout.php" class="ml-1"><?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?></a></div>
                     <div class="col-lg-6 text-center text-lg-right">
                         <ul class="menu list-inline mb-0">
                             <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
@@ -291,21 +304,26 @@ if (isset($_GET['pro_id'])) {
                         <p>Get isnide access to the latest news and special offers</p>
                         <p class="text-muted">If you have any enquiries, please feel free to <a href="contact.php">contact us</a>, We will try our best to get back to you.</p>
                         <hr>
-                        <form validate="true" action="customer-orders.html" method="post" id="register">
+                        <form validate="true" action="register.php" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input id="name" type="text" class="form-control" required>
+                                <input id="name" type="text" class="form-control" name="c_name" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input id="email" type="text" class="form-control" required>
+                                <input id="email" type="text" class="form-control" name="c_email" required>
                             </div>
+
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input id="password" type="password" class="form-control" required>
+                                <input id="password" type="password" class="form-control" name="c_pass" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Contact</label>
+                                <input id="text" type="text" class="form-control" name="c_contact" required>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-user-md"></i> Register</button>
+                                <button type="submit" name="register" class="btn btn-primary"><i class="fa fa-user-md"></i> Register</button>
                             </div>
                         </form>
 
@@ -319,19 +337,20 @@ if (isset($_GET['pro_id'])) {
                         <p class="lead">Already a customer?</p>
                         <p class="text-muted">Enter your email and password to log into your account.</p>
                         <hr>
-                        <form validate="true" action="customer-orders.html" method="post" id="login">
+                        <form validate="true" action="register.php" method="post" id="login">
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input id="email" type="text" class="form-control" required>
+                                <input id="email" type="text" class="form-control" name="c_email" required>
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input id="password" type="password" class="form-control" required>
+                                <input id="password" type="password" name="c_pass" class="form-control" required>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
+                                <button type="submit" name="login" class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
                             </div>
                         </form>
+                       
                     </div>
                 </div>
             </div>
@@ -345,3 +364,96 @@ if (isset($_GET['pro_id'])) {
 </body>
 
 </html>
+<?php
+
+if (isset($_POST['register'])) {
+
+    $c_name = $_POST['c_name'];
+
+    $c_email = $_POST['c_email'];
+
+    $c_pass = $_POST['c_pass'];
+
+    $c_contact = $_POST['c_contact'];
+
+    $c_ip = getRealIpUser();
+
+    $insert_customer = "insert into customers (customer_name,customer_email,customer_pass,customer_contact,customer_ip) values ('$c_name','$c_email','$c_pass','$c_contact','$c_ip')";
+
+    $run_customer = mysqli_query($con, $insert_customer);
+
+    $sel_cart = "select * from cart where ip_add='$c_ip'";
+
+    $run_cart = mysqli_query($con, $sel_cart);
+
+    $check_cart = mysqli_num_rows($run_cart);
+
+    if ($check_cart > 0) {
+
+        /// If register have items in cart ///
+
+        $_SESSION['customer_email'] = $c_email;
+
+        echo "<script>alert('You have been Registered Sucessfully')</script>";
+
+        echo "<script>window.open('checkout.php','_self')</script>";
+    } else {
+
+        /// If register without items in cart ///
+
+        $_SESSION['customer_email'] = $c_email;
+
+        echo "<script>alert('You have been Registered Sucessfully')</script>";
+
+        echo "<script>window.open('index.php','_self')</script>";
+    }
+}
+
+?>
+ <?php
+
+if (isset($_POST['login'])) {
+
+    $customer_email = $_POST['c_email'];
+
+    $customer_pass = $_POST['c_pass'];
+
+    $select_customer = "select * from customers where customer_email='$customer_email' AND customer_pass='$customer_pass'";
+
+    $run_customer = mysqli_query($con, $select_customer);
+
+    $get_ip = getRealIpUser();
+
+    $check_customer = mysqli_num_rows($run_customer);
+
+    $select_cart = "select * from cart where ip_add='$get_ip'";
+
+    $run_cart = mysqli_query($con, $select_cart);
+
+    $check_cart = mysqli_num_rows($run_cart);
+
+    if ($check_customer == 0) {
+
+        echo "<script>alert('Your email or password is wrong')</script>";
+
+        exit();
+    }
+
+    if ($check_customer == 1 and $check_cart == 0) {
+
+        $_SESSION['customer_email'] = $customer_email;
+
+        echo "<script>alert('You are Logged in')</script>";
+
+        echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
+    } else {
+
+        $_SESSION['customer_email'] = $customer_email;
+
+        echo "<script>alert('You are Logged in')</script>";
+
+        echo "<script>window.open('checkout.php','_self')</script>";
+    }
+}
+
+?>
