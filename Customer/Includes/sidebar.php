@@ -3,7 +3,31 @@
         <h3 class="h4 card-title">Customer section</h3>
     </div>
     <div class="card-title">
-        <h3 class="h4 card-heading">Name: Viola</h3>
+    <?php 
+        
+        $customer_session = $_SESSION['customer_email'];
+        
+        $get_customer = "select * from customers where customer_email='$customer_session'";
+        
+        $run_customer = mysqli_query($con,$get_customer);
+        
+        $row_customer = mysqli_fetch_array($run_customer);
+        
+        $customer_name = $row_customer['customer_name'];
+        
+        if(!isset($_SESSION['customer_email'])){
+            
+        }else{
+            
+            echo "
+            
+            <h3 class='h4 card-heading'>Name: $customer_name</h3>
+            
+            ";
+            
+        }
+        
+        ?>
     </div>
     <div class="card-body">
         <ul class="nav nav-pills flex-column">
