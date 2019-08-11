@@ -1,7 +1,7 @@
 <?php
 include("includes/header.php");
 ?>
-  <?php
+<?php
 
 $ip_add = getRealIpUser();
 
@@ -41,7 +41,7 @@ while ($row_cart = mysqli_fetch_array($run_cart)) {
         $total += $sub_total;
 
         ?>
-        
+
     <?php }
 } ?>
 <div id="content">
@@ -54,7 +54,7 @@ while ($row_cart = mysqli_fetch_array($run_cart)) {
                 <!-- Breadcrumb -->
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="br" href="index.php">Home</a></li>
-                    <li aria-current="page" class="breadcrumb-item active">Checkout / Address</li>
+                    <li aria-current="page" class="breadcrumb-item active">Checkout / Payment Method</li>
                 </ol>
             </nav>
 
@@ -62,59 +62,49 @@ while ($row_cart = mysqli_fetch_array($run_cart)) {
         <div class="row">
             <div id="checkout" class="col-lg-9">
                 <div class="box">
-                    <form method="get" action="checkout1.php">
-                        <h1>Checkout - Address</h1>
-                               
-                        <div class="nav flex-column flex-md-row nav-pills text-center"><a href="checkout1.html" class="nav-link flex-sm-fill text-sm-center active"> <i class="fa fa-map-marker"> </i>Address</a><a href="#" class="nav-link flex-sm-fill text-sm-center disabled"> <i class="fa fa-truck"> </i>Delivery Method</a><a href="#" class="nav-link flex-sm-fill text-sm-center disabled"> <i class="fa fa-money"> </i>Payment Method</a><a href="#" class="nav-link flex-sm-fill text-sm-center disabled"> <i class="fa fa-eye"> </i>Order Review</a></div>
+                    <form method="get" action="checkout3.php">
+                        <h1>Checkout - Payment method</h1>
+                        <div class="nav flex-column flex-sm-row nav-pills"><a href="checkout1.html" class="nav-link flex-sm-fill text-sm-center"> <i class="fa fa-map-marker"> </i>Address</a><a href="checkout2.html" class="nav-link flex-sm-fill text-sm-center"> <i class="fa fa-truck"> </i>Delivery Method</a><a href="checkout3.html" class="nav-link flex-sm-fill text-sm-center active"> <i class="fa fa-money"> </i>Payment Method</a><a href="#" class="nav-link flex-sm-fill text-sm-center disabled"> <i class="fa fa-eye"> </i>Order Review</a></div>
                         <div class="content py-3">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="firstname">Name</label>
-                                        <input id="firstname" type="text" class="form-control">
+                                    <div class="box payment-method">
+                                        <h4>Paypal</h4>
+                                        <p class="bg-danger text-center">Not Available</p>
+                                        <div class="box-footer text-center">
+                                            <input type="radio" name="payment" value="payment1">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="lastname">Surname</label>
-                                        <input id="lastname" type="text" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.row-->
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="company">Address</label>
-                                        <input id="company" type="text" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.row-->
-                            <div class="row">
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="phone">Contact</label>
-                                        <input id="phone" type="text" class="form-control">
+                                    <div class="box payment-method">
+                                        <h4>VISA and Mastercard.</h4>
+                                        <p class="bg-danger text-center">Not Available</p>
+                                        <div class="box-footer text-center">
+                                            <input type="radio" name="payment" value="payment2">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input id="email" type="text" class="form-control">
+                                    <div class="box payment-method">
+                                        <h4>Cash on delivery</h4>
+                                        <p >You pay when you get it.</p>
+                                        <p class="bg-success text-center">Available</p>
+                                        <div class="box-footer text-center">
+                                            <input type="radio" name="payment" value="payment3">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- /.row-->
                         </div>
-                        <div class="box-footer d-flex justify-content-between"><a href="cart.php" class="btn btn-outline-secondary"><i class="fa fa-chevron-left"></i>Back to Basket</a>
-                            <button type="submit" class="btn btn-primary">Continue to Delivery Method<i class="fa fa-chevron-right"></i></button>
+                        <!-- /.content-->
+                        <div class="box-footer d-flex justify-content-between"><a href="checkout1.php" class="btn btn-outline-secondary"><i class="fa fa-chevron-left"></i>Back to Delivery Method</a>
+                            <button type="submit" class="btn btn-primary">Continue to Order Review<i class="fa fa-chevron-right"></i></button>
                         </div>
                     </form>
-                    
+                    <!-- /.box-->
                 </div>
-                <!-- /.box-->
             </div>
             <!-- /.col-lg-9-->
             <div class="col-lg-3">
@@ -144,7 +134,7 @@ while ($row_cart = mysqli_fetch_array($run_cart)) {
                         </table>
                     </div>
                 </div>
-              
+
 
             </div>
 
