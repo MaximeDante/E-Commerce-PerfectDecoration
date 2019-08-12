@@ -1,7 +1,11 @@
 <?php
 include("includes/header.php");
 ?>
-  <?php
+<?php
+if (!isset($_SESSION['customer_email'])) {
+
+    echo "<script>window.open('register.php','_self')</script>";
+} else {
 
 $ip_add = getRealIpUser();
 
@@ -10,6 +14,7 @@ $select_cart = "select * from cart where ip_add='$ip_add'";
 $run_cart = mysqli_query($con, $select_cart);
 
 $count = mysqli_num_rows($run_cart);
+}
 
 ?>
 <?php

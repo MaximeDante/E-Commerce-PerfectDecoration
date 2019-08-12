@@ -324,11 +324,7 @@ if (isset($_GET['pro_id'])) {
                             include("my_orders.php");
                         }
                         ?>
-                        <?php
-                        if (isset($_GET['pay_offline'])) {
-                            include("pay_offline.php");
-                        }
-                        ?>
+                        
                         <?php
                         if (isset($_GET['edit_account'])) {
                             include("edit_account.php");

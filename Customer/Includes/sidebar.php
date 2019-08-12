@@ -36,11 +36,7 @@
                     <i class="fa fa-list"></i> My orders
                 </a>
             </li>
-            <li class="<?php if(isset($_GET['pay_offline'])){ echo "nav-link active"; } ?>">
-                <a href="my_account.php?pay_offline" class="nav-link ">
-                    <i class="fa fa-bolt"></i> Pay Offline
-                </a>
-            </li>
+           
             <li class="<?php if(isset($_GET['edit_account'])){ echo "nav-link active"; } ?>">
                 <a href="my_account.php?edit_account" class="nav-link">
                     <i class="fa fa-wrench"></i> Edit Account

@@ -11,7 +11,7 @@ include("includes/header.php");
                 <!-- Breadcrumb -->
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="br" href="index.php">Home</a></li>
-                    <li aria-current="page" class="breadcrumb-item active">Men</li>
+                    <li aria-current="page" class="breadcrumb-item active">Shop</li>
                 </ol>
             </nav>
 

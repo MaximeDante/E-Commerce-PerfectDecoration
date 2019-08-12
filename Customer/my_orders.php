@@ -21,7 +21,7 @@
                 <th> Size: </th>
                 <th> Order Date:</th>
                 <th> Paid / Unpaid: </th>
-                <th> Status: </th>
+              <!--  <th> Status: </th> -->
 
             </tr>
         </thead>
@@ -83,11 +83,11 @@
                 <td> <?php echo $order_date; ?> </td>
                 <td> <?php echo $order_status; ?> </td>
                 
-                <td>
+               <!-- <td>
                     
                     <a href="confirm.php?order_id=<?php echo $order_id; ?>" target="_blank" class="btn btn-primary btn-sm"> Confirm Paid </a>
                     
-                </td>
+                </td>  --->
             </tr>
             <?php } ?>
         </tbody>

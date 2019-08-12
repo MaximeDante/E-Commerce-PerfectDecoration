@@ -1,6 +1,6 @@
 <?php
-   $active='Home';
-  include("includes/header.php");
+$active = 'Home';
+include("includes/header.php");
 ?>
 <div class="container" id="slider">
     <!-- container Begin -->
@@ -57,6 +57,8 @@
         </div><!-- container Finish -->
     </div>
 </div> <!-- slider ends -->
+
+
 <div class="container" id="advantages">
     <div class="container">
         <div class="row mb-4">
@@ -71,7 +73,7 @@
                 <div class="box clickable d-flex flex-column justify-content-center mb-0 h-100">
                     <div class="icon"><i class="fa fa-tags"></i></div>
                     <h3><a href="#">Best prices</a></h3>
-                    <p class="mb-0">You can check that the height of the boxes adjust when longer text like this one is used in one of them.</p>
+                    <p class="mb-0">We offer you decoration items at an affordable price.</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -86,6 +88,7 @@
     </div>
     <!-- /.container-->
 </div> <!-- advantages ends -->
+
 <div id="hot">
     <!-- hot begins -->
     <div class="box">
@@ -103,6 +106,8 @@
     </div> <!-- box ends -->
 </div> <!-- hot ends -->
 <div id="content" class="container">
+    
+
     <!-- latest Porduct Begins -->
     <div class="row">
         <!-- latest Porduct row Begins -->

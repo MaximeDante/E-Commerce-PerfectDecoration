@@ -50,13 +50,13 @@ include("includes/header.php");
                                 <!-- The slideshow -->
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="Images/<?php echo $pro_img1; ?>" alt="slider1" class="img-fluid" height="50px">
+                                        <img src="Admin_Area/product_images/<?php echo $pro_img1; ?>" alt="slider1" class="img-fluid" height="50px">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="Images/<?php echo $pro_img2; ?>" alt="slider2" class="img-fluid">
+                                        <img src="Admin_Area/product_images/<?php echo $pro_img2; ?>" alt="slider2" class="img-fluid">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="Images/<?php echo $pro_img3; ?>" alt="slider3" class="img-fluid">
+                                        <img src="Admin_Area/product_images/<?php echo $pro_img3; ?>" alt="slider3" class="img-fluid">
                                     </div>
                                 </div>
 
@@ -84,7 +84,7 @@ include("includes/header.php");
                                     <!-- form-horizontal Begin -->
                                     <div class=" align-content-center">
                                         <!-- form-group Begin -->
-                                        <label for="" class="">Products Quantity</label>
+                                        <label for="" class="">Quantity</label>
 
 
                                         <!-- col-md-7 Begin -->
@@ -100,25 +100,13 @@ include("includes/header.php");
 
 
                                     </div><!-- form-group Finish -->
-
-                                    <div class="">
-                                        <!-- form-group Begin -->
-                                        <label class="">Product Size</label>
-
-
-
-                                        <select name="product_size" class="form-control">
-                                            <!-- form-control Begin -->
-
-                                            <option disabled selected>Select a Size</option>
-                                            <option>Small</option>
-                                            <option>Medium</option>
-                                            <option>Large</option>
-
-                                        </select><!-- form-control Finish -->
+                                    <div >
+                                        <h3 class="text-center">Status</h3>
+                                        <p class="text-center bg-success">In Stock</p>
+                                    </div>
 
 
-                                    </div><!-- form-group Finish -->
+                                   
 
                                     <p class="price"> R <?php echo $pro_price; ?></p>
 
@@ -143,12 +131,10 @@ include("includes/header.php");
                         <?php echo $pro_desc; ?>
                     </p>
 
-                    <h4>Size</h4>
+                    <h4>Free Returns</h4>
 
                     <ul>
-                        <li>Small</li>
-                        <li>Medium</li>
-                        <li>Large</li>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla fugit cupiditate tenetur nesciunt? Libero assumenda nisi recusandae repellendus. Praesentium cupiditate odit autem harum sint ea, corrupti iste laudantium minima aspernatur!
                     </ul>
 
                     <hr>

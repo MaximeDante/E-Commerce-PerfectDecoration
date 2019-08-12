@@ -28,7 +28,7 @@ if (isset($_POST['Yes'])) {
 
         session_destroy();
 
-        echo "<script>alert('Successfully delete your account, feel sorry about this. Good Bye')</script>";
+        echo "<script>alert('Your account has been deleted successfully,  We feel sorry about this. Good Bye')</script>";
 
         echo "<script>window.open('../index.php','_self')</script>";
     }
