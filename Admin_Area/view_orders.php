@@ -45,6 +45,7 @@
                                 <th> Product Size: </th>
                                 <th> Order Date: </th>
                                 <th> Total Amount: </th>
+                                <th> Confirm: </th>
                                 <th> Status: </th>
                                 <th> Delete: </th>
                             </tr><!-- tr finish -->
@@ -115,6 +116,7 @@
                                 <td> <?php echo $size; ?> </td>
                                 <td> <?php echo $order_date; ?> </td>
                                 <td> <?php echo $order_amount; ?> </td>
+                                <td> <a href="confirm.php" class="btn btn-primary btn-sm"> Confirm Paid </a></td>
                                 <td>
                                     
                                     <?php 
